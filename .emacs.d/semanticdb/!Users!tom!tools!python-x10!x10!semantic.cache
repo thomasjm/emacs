@@ -1,0 +1,24 @@
+;; Object x10/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "x10/"
+  :tables (list 
+   (semanticdb-table "protocol.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("functions" type
+               (:superclasses ("object")
+                :members 
+                  ( ("" code nil (reparse-symbol indented_block_body) [58 275]))                  
+                :type "class")
+                nil [29 276]))          
+    :file "protocol.py"
+    :pointmax 297
+    :fsize 296
+    :lastmodtime '(21293 16998 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!tools!python-x10!x10!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

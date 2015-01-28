@@ -1,0 +1,40 @@
+;; Object chart/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "chart/"
+  :tables (list 
+   (semanticdb-table "chart-editor.htm"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Format <i class=\"fa fa-caret-down\">" anchor nil nil [309 312])
+            ("Format <i class=\"fa fa-caret-down\">" anchor nil nil [578 581])
+            ("Format <i class=\"fa fa-caret-down\">" anchor nil nil [848 851])
+            ("Format <i class=\"fa fa-caret-down\">" anchor nil nil [1124 1127])
+            ("Auto" anchor nil nil [1914 1917])
+            ("Stack Style" anchor nil nil [2259 2262])
+            ("Stack Style" anchor nil nil [2648 2651])
+            ("Edit" anchor nil nil [3369 3372])
+            ("Edit" anchor nil nil [3755 3758])
+            ("Edit" anchor nil nil [4264 4267]))          
+    :file "chart-editor.htm"
+    :pointmax 5024
+    :fsize 5023
+    :lastmodtime '(21364 361 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "chart-view.htm"
+    :major-mode 'html-mode
+    :tags 
+        '( ("No result" anchor nil nil [160 163])
+            ("No result" section nil nil [759 1171])
+            ("No result" section nil nil [1171 1548]))          
+    :file "chart-view.htm"
+    :pointmax 1548
+    :fsize 1547
+    :lastmodtime '(21346 50862 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!code!pxfe!html!px!hep!dirs!chart!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

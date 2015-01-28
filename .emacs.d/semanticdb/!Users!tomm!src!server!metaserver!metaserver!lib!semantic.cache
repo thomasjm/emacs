@@ -1,0 +1,18 @@
+;; Object lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lib/"
+  :tables (list 
+   (semanticdb-table "dropboxer_details.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "dropboxer_details.py"
+    :pointmax 327620
+    :fsize 327619
+    :lastmodtime '(21372 9367 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tomm!src!server!metaserver!metaserver!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

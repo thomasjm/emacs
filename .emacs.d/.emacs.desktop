@@ -1,0 +1,315 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Dec  5 00:43:29 2014
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("google-se" "wlr" "restcli" "apx-dev." "analytics" "loaddataset" "8080" "401" "alias s" "s=" "tiny\"" "zendesk" "\"tiny\"" "dataset" ".nh" "makelet"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/Users/tomm/Dropbox (Personal)/emacs/.emacs.d/.emacs_packages.el" "/Users/tomm/.emacs" "/Users/tomm/tmp/hackpad_tests.txt" "/Users/tomm/.zshrc" "/Users/tomm/.ssh/config" "/Users/tomm/Dropbox/haskell/clock/theta.h" "/Users/tomm/Dropbox/haskell/clock/numbers/9.svg" "/Users/tomm/Dropbox (Personal)/haskell/clock/.git/COMMIT_EDITMSG" "/Users/tomm/Dropbox/haskell/clock/Rendering.hs" "/Users/tomm/Dropbox (Personal)/haskell/clock/.git/COMMIT_EDITMSG" "/Users/tomm/Dropbox/haskell/clock/theta.c" "~/Dropbox/haskell/clock/" "/Users/tomm/Dropbox/haskell/clock/clock.cabal" "~/Dropbox (Personal)/haskell/realworldhaskell_examples/ch17/" "~/Dropbox/haskell/realworldhaskell_examples/ch17/" "/Users/tomm/Dropbox/haskell/realworldhaskell_examples/ch17/SimpleFFI.hs" "~/Dropbox (Personal)/haskell/clock/" "~/Dropbox/haskell/clock/" "/Users/tomm/Dropbox/haskell/clock/Clock.hs"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/tomm/Dropbox (Personal)/todo/work.org"
+  "work.org"
+  'org-mode
+  '(global-auto-revert-mode projectile-mode org-indent-mode magit-auto-revert-mode)
+  915
+  '(1788 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/Dropbox (Personal)/emacs/.emacs.d/.emacs_packages.el"
+  ".emacs_packages.el"
+  'emacs-lisp-mode
+  '(global-auto-revert-mode yas/minor-mode projectile-mode auto-complete-mode git-gutter-mode dired-omit-mode magit-auto-revert-mode)
+  2708
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/Dropbox (Personal)/emacs/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(global-auto-revert-mode yas/minor-mode projectile-mode auto-complete-mode git-gutter-mode magit-auto-revert-mode)
+  8313
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/Dropbox (Personal)/todo/todo.org"
+  "todo.org"
+  'org-mode
+  '(global-auto-revert-mode projectile-mode org-indent-mode magit-auto-revert-mode)
+  195
+  '(3594 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "analytics"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode dired-omit-mode magit-auto-revert-mode)
+  1909
+  '(1909 nil)
+  t
+  '("/Users/tomm/src/analytics/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "clock"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode magit-auto-revert-mode)
+  508
+  '(nil nil)
+  t
+  '("/Users/tomm/Dropbox/haskell/clock/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/apxfe/nighthawk/apx/chart-editor-view/chart-editor-view-controller.js"
+  "chart-editor-view-controller.js"
+  'js2-mode
+  '(global-auto-revert-mode projectile-mode auto-complete-mode git-gutter-mode magit-auto-revert-mode)
+  417
+  '(417 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "apxfe"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode magit-auto-revert-mode)
+  142
+  '(nil nil)
+  t
+  '("/Users/tomm/src/apxfe/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/tmp/hackpad_tests.txt"
+  "hackpad_tests.txt"
+  'restclient-mode
+  '(global-auto-revert-mode projectile-mode magit-auto-revert-mode)
+  86
+  '(36 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "tmp"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode dired-omit-mode magit-auto-revert-mode)
+  140
+  '(nil nil)
+  t
+  '("/Users/tomm/tmp/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/server/dropbox/yaps/autopush/autopush.py"
+  "autopush.py"
+  'python-mode
+  '(global-auto-revert-mode yas/minor-mode projectile-mode auto-complete-mode git-gutter-mode magit-auto-revert-mode elpy-mode)
+  7201
+  '(1412 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/puppet/modules/yaps/manifests/autopush.pp"
+  "autopush.pp"
+  'puppet-mode
+  '(global-auto-revert-mode projectile-mode git-gutter-mode magit-auto-revert-mode)
+  22152
+  '(170 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "server"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode dired-omit-mode magit-auto-revert-mode)
+  2354
+  '(2354 nil)
+  t
+  '("/Users/tomm/src/server/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "puppet"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode dired-omit-mode magit-auto-revert-mode)
+  142
+  '(nil nil)
+  t
+  '("/Users/tomm/src/puppet/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/apxfe/core/apx/services/onyx-service.js"
+  "onyx-service.js"
+  'js2-mode
+  '(global-auto-revert-mode projectile-mode auto-complete-mode git-gutter-mode magit-auto-revert-mode)
+  17762
+  '(68 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/apxfe/nighthawk/apx/components/chart/chart-factory.js"
+  "chart-factory.js"
+  'js2-mode
+  '(global-auto-revert-mode projectile-mode auto-complete-mode git-gutter-mode text-scale-mode magit-auto-revert-mode)
+  8645
+  '(8645 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/apxfe/core/apx/models/schemaFactory.js"
+  "schemaFactory.js"
+  'js2-mode
+  '(global-auto-revert-mode projectile-mode auto-complete-mode git-gutter-mode text-scale-mode magit-auto-revert-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "dbops"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode dired-omit-mode magit-auto-revert-mode)
+  140
+  '(nil nil)
+  t
+  '("/Users/tomm/src/dbops/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/.zshrc"
+  ".zshrc"
+  'sh-mode
+  '(global-auto-revert-mode projectile-mode auto-complete-mode magit-auto-revert-mode)
+  3659
+  '(4874 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/apxfe/nighthawk/apx/components/dataset/dataset-factory.js"
+  "dataset-factory.js"
+  'js2-mode
+  '(global-auto-revert-mode projectile-mode auto-complete-mode git-gutter-mode magit-auto-revert-mode)
+  336
+  '(63 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/apxbe/src/main/java/com/dropbox/apx/onyx/engine/prestohive/PrestoHiveEngine.java"
+  "PrestoHiveEngine.java"
+  'java-mode
+  '(abbrev-mode global-auto-revert-mode projectile-mode auto-complete-mode git-gutter-mode magit-auto-revert-mode)
+  27588
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/apxbe/src/main/java/com/dropbox/apx/onyx/engine/Schema.java"
+  "Schema.java"
+  'java-mode
+  '(abbrev-mode global-auto-revert-mode projectile-mode auto-complete-mode git-gutter-mode magit-auto-revert-mode)
+  3398
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "apxbe"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode dired-omit-mode magit-auto-revert-mode)
+  141
+  '(nil nil)
+  t
+  '("/Users/tomm/src/apxbe/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/dbops/presto/analytics-presto/etc-coordinator/config.properties.erb"
+  "config.properties.erb"
+  'conf-javaprop-mode
+  '(global-auto-revert-mode projectile-mode git-gutter-mode magit-auto-revert-mode)
+  272
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "etc-coordinator"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode dired-omit-mode magit-auto-revert-mode)
+  247
+  '(nil nil)
+  t
+  '("/Users/tomm/src/dbops/presto/analytics-presto/etc-coordinator/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/dbops/presto/analytics-presto/etc-discovery/config.properties"
+  "config.properties"
+  'conf-javaprop-mode
+  '(global-auto-revert-mode projectile-mode git-gutter-mode magit-auto-revert-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/dbops/presto/analytics-presto/etc-coordinator/node.properties.erb"
+  "node.properties.erb"
+  'conf-javaprop-mode
+  '(global-auto-revert-mode projectile-mode git-gutter-mode magit-auto-revert-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+

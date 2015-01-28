@@ -1,0 +1,31 @@
+;; Object javaproc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "javaproc/"
+  :tables (list 
+   (semanticdb-table "json_split.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("json" include nil nil [2 22])
+            ("sys" include nil nil [2 22])
+            ("os" include nil nil [2 22])
+            ("json.decoder" include nil nil [24 59])
+            ("open_json_file" function (:arguments 
+              ( ("output_folder" variable nil (reparse-symbol function_parameters) [80 93])
+                ("counter" variable nil (reparse-symbol function_parameters) [95 102]))              ) nil [61 245])
+            ("process_json" function (:arguments 
+              ( ("all_json" variable nil (reparse-symbol function_parameters) [263 271])
+                ("output_folder" variable nil (reparse-symbol function_parameters) [273 286])
+                ("max_bytes_per_file" variable nil (reparse-symbol function_parameters) [288 306]))              ) nil [246 957])
+            ("if" code nil nil [958 1183])
+            ("all_json" variable nil nil [1184 1239]))          
+    :file "json_split.py"
+    :pointmax 1240
+    :fsize 1239
+    :lastmodtime '(21363 52009 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!twitter!Twitter-Dataset!javaproc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

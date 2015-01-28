@@ -1,0 +1,351 @@
+;; Object support/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "support/"
+  :tables (list 
+   (semanticdb-table "FileMonitor.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("config.h" include (:system-flag t) nil [234 253])
+            ("support/FileMonitor.h" include nil nil [255 287])
+            ("support/FileName.h" include nil nil [289 318])
+            ("support/Timeout.h" include nil nil [319 347])
+            ("support/bind.h" include nil nil [349 374])
+            ("boost/signals/trackable.hpp" include (:system-flag t) nil [375 413])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [415 435])
+            ("lyx" type
+               (:members 
+                  ( ("support" type
+                       (:members 
+                          ( ("Impl" type
+                               (:parent "FileMonitor"
+                                :superclasses 
+                                  ( ("boost::signals::trackable" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [535 542])
+                                    ("Impl" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("file_with_path" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("FileName" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [555 587])
+                                            ("interval" variable (:type "int") (reparse-symbol arg-sub-list) [588 601]))                                          
+                                        :type ("Impl" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [550 602])
+                                    ("monitorFile" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [610 629])
+                                    ("filename_" variable (:type ("FileName" type (:type "class") nil nil)) (reparse-symbol classsubparts) [637 656])
+                                    ("timer_" variable (:type ("Timeout" type (:type "class") nil nil)) (reparse-symbol classsubparts) [664 679])
+                                    ("fileChanged_" variable (:type ("FileMonitor::FileChangedSig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [756 797])
+                                    ("timestamp_" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [896 914])
+                                    ("checksum_" variable (:type "unsigned long") (reparse-symbol classsubparts) [921 945]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [474 948])
+                            ("FileMonitor" function
+                               (:constructor-flag t
+                                :parent "FileMonitor"
+                                :arguments 
+                                  ( ("file_with_path" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("FileName" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [976 1008])
+                                    ("interval" variable (:type "int") (reparse-symbol arg-sub-list) [1009 1022]))                                  
+                                :type ("FileMonitor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [951 1071])
+                            ("FileMonitor" function
+                               (:destructor-flag t
+                                :parent "FileMonitor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1074 1121])
+                            ("reset" function
+                               (:parent "FileMonitor"
+                                :arguments 
+                                  ( ("file_with_path" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("FileName" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1148 1180]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1124 1379])
+                            ("filename" function
+                               (:parent "FileMonitor"
+                                :type ("FileName" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1382 1459])
+                            ("start" function
+                               (:parent "FileMonitor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1462 1818])
+                            ("stop" function
+                               (:parent "FileMonitor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1821 1928])
+                            ("monitoring" function
+                               (:parent "FileMonitor"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1931 2005])
+                            ("checksum" function
+                               (:parent "FileMonitor"
+                                :type "unsigned long")
+                                (reparse-symbol namespacesubparts) [2008 2275])
+                            ("connect" function
+                               (:parent "FileMonitor"
+                                :arguments 
+                                  ( ("slot" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("slot_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2326 2349]))                                  
+                                :type ("boost::signals::connection" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2278 2403])
+                            ("Impl" function
+                               (:constructor-flag t
+                                :parent "FileMonitor::Impl"
+                                :arguments 
+                                  ( ("file_with_path" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("FileName" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2531 2563])
+                                    ("interval" variable (:type "int") (reparse-symbol arg-sub-list) [2564 2577]))                                  
+                                :type ("Impl" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2507 2741])
+                            ("monitorFile" function
+                               (:parent "FileMonitor::Impl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2744 3255]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [453 3258]))                  
+                :type "namespace")
+                nil [437 3281]))          
+    :file "FileMonitor.cpp"
+    :pointmax 3299
+    :fsize 3298
+    :lastmodtime '(21132 23732 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "AppleSpeller.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LYX_SUPPORT_SPELLCHECK_H" variable (:constant-flag t) nil [288 312])
+            ("SpellCheckResult" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "SpellCheckResult"
+                :typedef ("SpellCheckResult" type (:type "enum") nil nil))
+                (reparse-symbol extern-c-contents) [354 487])
+            ("SpellCheckResult" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("SPELL_CHECK_FAILED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [387 406])
+                    ("SPELL_CHECK_OK" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [408 423])
+                    ("SPELL_CHECK_IGNORED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [425 445])
+                    ("SPELL_CHECK_LEARNED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [447 468]))                  )
+                (reparse-symbol extern-c-contents) [354 487])
+            ("AppleSpeller" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "AppleSpellerRec"
+                :pointer 1
+                :typedef ("AppleSpellerRec" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [489 536])
+            ("newAppleSpeller" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("AppleSpeller" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [567 572]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [538 573])
+            ("freeAppleSpeller" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [596 617]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [574 618])
+            ("AppleSpeller_check" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("SpellCheckResult" type (:type "class") nil nil)
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [656 677])
+                    ("word" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [678 696])
+                    ("lang" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [697 715]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [620 716])
+            ("AppleSpeller_ignore" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [742 763])
+                    ("word" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [764 782]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [717 783])
+            ("AppleSpeller_makeSuggestion" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [819 840])
+                    ("word" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [841 859])
+                    ("lang" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [860 878]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [784 879])
+            ("AppleSpeller_getSuggestion" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [920 941])
+                    ("pos" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [942 953]))                  
+                :constant-flag t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [880 954])
+            ("AppleSpeller_learn" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [979 1000])
+                    ("word" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1001 1019]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [955 1020])
+            ("AppleSpeller_unlearn" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1047 1068])
+                    ("word" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1069 1087]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1021 1088])
+            ("AppleSpeller_hasLanguage" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1118 1139])
+                    ("lang" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1140 1158]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1089 1159])
+            ("AppleSpeller_numMisspelledWords" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1196 1217]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1160 1218])
+            ("AppleSpeller_misspelledWord" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("speller" variable (:type ("AppleSpeller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1252 1273])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1274 1284])
+                    ("start" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1285 1297])
+                    ("length" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1298 1311]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1219 1312]))          
+    :file "AppleSpeller.h"
+    :pointmax 1364
+    :fsize 1363
+    :lastmodtime '(21132 23732 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("LYX_SUPPORT_SPELLCHECK_H")
+          )
+
+    )
+   (semanticdb-table "FileMonitor.h"
+    :file "FileMonitor.h"
+    :fsize 1724
+    :lastmodtime '(21132 23732 0 0)
+    )
+   (semanticdb-table "FileName.h"
+    :file "FileName.h"
+    :fsize 10382
+    :lastmodtime '(21132 23732 0 0)
+    )
+   (semanticdb-table "Timeout.h"
+    :file "Timeout.h"
+    :fsize 1697
+    :lastmodtime '(21132 23732 0 0)
+    )
+   (semanticdb-table "bind.h"
+    :file "bind.h"
+    :fsize 573
+    :lastmodtime '(21132 23732 0 0)
+    )
+   (semanticdb-table "debug.h"
+    :file "debug.h"
+    :fsize 5274
+    :lastmodtime '(21132 23732 0 0)
+    )
+   (semanticdb-table "os.h"
+    :file "os.h"
+    :fsize 5417
+    :lastmodtime '(21132 23732 0 0)
+    )
+   )
+  :file "!Users!tom!Dropbox-personal!Dropbox!math!lyx_minimal!support!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

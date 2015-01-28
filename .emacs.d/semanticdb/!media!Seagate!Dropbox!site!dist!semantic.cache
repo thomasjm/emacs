@@ -1,0 +1,25 @@
+;; Object dist/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dist/"
+  :tables (list 
+   (semanticdb-table "test-dir.htm"
+    :major-mode 'html-mode
+    :tags nil
+    :file "test-dir.htm"
+    :pointmax 62
+    :fsize 61
+    :lastmodtime '(21345 19710 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "index.htm"
+    :major-mode 'html-mode
+    :tags nil
+    :file "index.htm"
+    :pointmax 4014
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!Seagate!Dropbox!site!dist!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

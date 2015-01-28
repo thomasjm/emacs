@@ -1,0 +1,19 @@
+;; Object FunctionalAnalysis/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "FunctionalAnalysis/"
+  :tables (list 
+   (semanticdb-table "1.4.xhtml"
+    :major-mode 'html-mode
+    :tags 
+        '( ("LyX Document" section nil nil [347 543])
+            ("A sequence is convergent to <math xmlns=\"http://www.w3.org/1998/Math/MathML\">
+ <mrow><mi>l" section nil nil [543 7361]))          
+    :file "1.4.xhtml"
+    :pointmax 7361
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!Dropbox-personal!Dropbox!DailyMath!FunctionalAnalysis!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

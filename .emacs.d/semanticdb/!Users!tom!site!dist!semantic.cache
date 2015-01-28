@@ -1,0 +1,31 @@
+;; Object dist/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dist/"
+  :tables (list 
+   (semanticdb-table "Efficiently generating random numbers.htm"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Clever title here" section nil nil [43 977])
+            ("MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});" section nil nil [977 1111])
+            ("Clever title here" section nil nil [1111 1253])
+            ("Clever title here" section nil nil [1253 1315])
+            ("Clever title here" section (:members 
+              ( ("Clever title here" section (:members 
+                  ( ("Projects" anchor nil nil [1487 1490])
+                    ("Blog posts" anchor nil nil [1603 1606])
+                    ("About" anchor nil nil [1721 1724])
+                    ("Efficiently generating random numbers" anchor nil nil [6402 6405])
+                    ("Introduction to Markdown.md" anchor nil nil [6596 6599])
+                    ("Other.md" anchor nil nil [6770 6773])
+                    ("test.md" anchor nil nil [6906 6909]))                  ) nil [1378 7128]))              ) nil [1315 7128]))          
+    :file "Efficiently generating random numbers.htm"
+    :pointmax 7128
+    :fsize 5988
+    :lastmodtime '(21357 16620 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!site!dist!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

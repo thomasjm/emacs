@@ -1,0 +1,5 @@
+*~
+*.eld
+*.elc
+.session
+auto-save-list

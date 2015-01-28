@@ -1,0 +1,135 @@
+;; Object cgi-bin/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cgi-bin/"
+  :tables (list 
+   (semanticdb-table "controller.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("logging" include nil nil [2 16])
+            ("sys" include nil nil [17 27])
+            ("sets" include nil nil [28 39])
+            ("x10.controllers.cm11" include nil nil [42 79])
+            ("x10.protocol" include nil nil [81 115])
+            ("logger" variable nil nil [117 145])
+            ("hdlr" variable nil nil [146 176])
+            ("formatter" variable nil nil [187 270])
+            ("hdlr" code nil nil [271 299])
+            ("logger" code nil nil [300 323])
+            ("logger" code nil nil [324 354])
+            ("basic_actuators" variable nil nil [356 584])
+            ("aliases" variable nil nil [664 915])
+            ("all_device_strings" variable nil nil [917 967])
+            ("HouseController" type
+               (:members 
+                  ( ("MAX_DIM_AMOUNT" variable nil (reparse-symbol indented_block_body) [996 1015])
+                    ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [1049 1053]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1034 1038]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1021 1054])
+                    ("get_device" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1073 1077]))                          )
+                        (reparse-symbol indented_block_body) [1058 1194])
+                    ("get_devices" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1419 1423])
+                            ("actuator_or_alias" variable nil (reparse-symbol function_parameters) [1425 1442]))                          )
+                        (reparse-symbol indented_block_body) [1403 1734])
+                    ("on" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1746 1750])
+                            ("strings" variable nil (reparse-symbol function_parameters) [1752 1759]))                          )
+                        (reparse-symbol indented_block_body) [1739 2106])
+                    ("off" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2119 2123])
+                            ("strings" variable nil (reparse-symbol function_parameters) [2125 2132]))                          )
+                        (reparse-symbol indented_block_body) [2111 2510])
+                    ("_get_devs_currently_on" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2542 2546]))                          )
+                        (reparse-symbol indented_block_body) [2515 2562])
+                    ("dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2638 2642])
+                            ("groups" variable nil (reparse-symbol function_parameters) [2644 2650])
+                            ("level" variable nil (reparse-symbol function_parameters) [2652 2657]))                          )
+                        (reparse-symbol indented_block_body) [2630 2996])
+                    ("dim_currently_on" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3023 3027])
+                            ("level" variable nil (reparse-symbol function_parameters) [3029 3034]))                          )
+                        (reparse-symbol indented_block_body) [3002 3082]))                  
+                :type "class")
+                nil [969 3082]))          
+    :file "controller.py"
+    :pointmax 3284
+    :fsize 3153
+    :lastmodtime '(21293 18069)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "simpletest.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("x10.protocol" include nil nil [1 35])
+            ("x10.controllers.cm11" include nil nil [36 73])
+            ("logging" include nil nil [74 88])
+            ("logger" variable nil nil [90 118])
+            ("hdlr" variable nil nil [119 149])
+            ("formatter" variable nil nil [160 243])
+            ("hdlr" code nil nil [244 272])
+            ("logger" code nil nil [273 296])
+            ("logger" code nil nil [297 327])
+            ("get_device" function nil nil [329 445])
+            ("dev" variable nil nil [446 464])
+            ("dev" code nil nil [466 484]))          
+    :file "simpletest.py"
+    :pointmax 292
+    :fsize 545
+    :lastmodtime '(21293 18371)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "house.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("cgi" include nil nil [90 100])
+            ("form" variable nil nil [101 126])
+            ("command" variable nil nil [127 173])
+            ("print" code nil nil [175 211])
+            ("print" code nil nil [212 244])
+            ("controller" include nil nil [246 284])
+            ("houseController" variable nil nil [285 320])
+            ("if" code nil nil [323 479]))          
+    :file "house.py"
+    :pointmax 479
+    :fsize 478
+    :lastmodtime '(21293 16145)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "manual.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [20 30])
+            ("if" code nil nil [32 775]))          
+    :file "manual.py"
+    :pointmax 775
+    :fsize 774
+    :lastmodtime '(21293 18055)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!scpc:pi@10.0.0.19:!home!pi!tlbconfig!cgi-bin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

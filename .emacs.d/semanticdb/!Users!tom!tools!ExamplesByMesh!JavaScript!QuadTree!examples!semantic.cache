@@ -1,0 +1,35 @@
+;; Object examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "examples/"
+  :tables (list 
+   (semanticdb-table "collision.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("QuadTree Collision Detection Example" section nil nil [1475 1529])
+            ("Show QuadTree Boundaries
+			<span id=\"countLinks\">Circles : <a href=\"collision.html?circleCount=10\">10" section nil nil [1529 1571])
+            ("Show QuadTree Boundaries
+			<span id=\"countLinks\">Circles : <a href=\"collision.html?circleCount=10\">10" section nil nil [1571 1615])
+            ("Show QuadTree Boundaries
+			<span id=\"countLinks\">Circles : <a href=\"collision.html?circleCount=10\">10" section nil nil [1615 1658])
+            ("Show QuadTree Boundaries
+			<span id=\"countLinks\">Circles : <a href=\"collision.html?circleCount=10\">10" section nil nil [1658 1763])
+            ("Show QuadTree Boundaries
+			<span id=\"countLinks\">Circles : <a href=\"collision.html?circleCount=10\">10" section (:members 
+              ( ("10" anchor nil nil [2051 2054])
+                ("100" anchor nil nil [2105 2108])
+                ("250" anchor nil nil [2161 2164])
+                ("500" anchor nil nil [2217 2220])
+                ("Mike Chambers" anchor nil nil [2322 2325])
+                ("GitHub" anchor nil nil [2441 2444]))              ) nil [1763 2567]))          
+    :file "collision.html"
+    :pointmax 2567
+    :fsize 2566
+    :lastmodtime '(21319 4860 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!tools!ExamplesByMesh!JavaScript!QuadTree!examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

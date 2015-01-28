@@ -1,0 +1,21 @@
+;; Object page/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "page/"
+  :tables (list 
+   (semanticdb-table "index.htm"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Hello!" section nil nil [37 113])
+            ("Hello!" section nil nil [113 262])
+            ("" section nil nil [262 338]))          
+    :file "index.htm"
+    :pointmax 338
+    :fsize 337
+    :lastmodtime '(21340 26018 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!Dropbox-personal!Dropbox!r47!page!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

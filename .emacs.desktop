@@ -1,0 +1,161 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Nov 14 13:11:54 2014
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("pp" "apx_frontend" "ensure" "it" "	t" "loo" "fil" "fly" "master" "pure" "filter-h" "flywhe" "flywheel" "master" "pures"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/Users/tomm/Dropbox (Personal)/emacs" "/Users/tomm/.emacs" "/Users/tomm/.zshrc" "/tmp/branches_to_delete" "/tmp/diagram1.svg" "~/Dropbox (Personal)/haskell/clock/" "~/Dropbox/haskell/clock/" "/Users/tomm/Dropbox/haskell/clock/diagram1.hs"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/tomm/Dropbox (Personal)/emacs/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(global-auto-revert-mode yas/minor-mode projectile-mode whole-line-or-region-mode auto-complete-mode magit-auto-revert-mode)
+  8335
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/dbops/nginx/config/nginx-pp.conf"
+  "nginx-pp.conf"
+  'conf-space-mode
+  '(global-auto-revert-mode projectile-mode whole-line-or-region-mode magit-auto-revert-mode)
+  4269
+  '(3015 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "dbops"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode whole-line-or-region-mode dired-omit-mode magit-auto-revert-mode)
+  140
+  '(nil nil)
+  t
+  '("/Users/tomm/src/dbops/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/analytics/analytics/analytics/lib/automail/automail.py"
+  "automail.py"
+  'python-mode
+  '(global-auto-revert-mode yas/minor-mode projectile-mode whole-line-or-region-mode auto-complete-mode elpy-mode magit-auto-revert-mode)
+  15014
+  '(1 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "analytics"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode whole-line-or-region-mode dired-omit-mode magit-auto-revert-mode)
+  438
+  '(nil nil)
+  t
+  '("/Users/tomm/src/analytics/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/tomm/Dropbox (Personal)/todo/work.org"
+  "work.org"
+  'org-mode
+  '(global-auto-revert-mode projectile-mode whole-line-or-region-mode org-indent-mode magit-auto-revert-mode)
+  358
+  '(4657 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/.zshrc"
+  ".zshrc"
+  'sh-mode
+  '(global-auto-revert-mode projectile-mode whole-line-or-region-mode auto-complete-mode magit-auto-revert-mode)
+  4204
+  '(4706 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/tmp/branches_to_delete"
+  "branches_to_delete"
+  'fundamental-mode
+  '(global-auto-revert-mode projectile-mode whole-line-or-region-mode magit-auto-revert-mode)
+  2
+  '(3592 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/Dropbox/haskell/clock/diagram1.hs"
+  "diagram1.hs"
+  'haskell-mode
+  '(haskell-indent-mode global-auto-revert-mode projectile-mode whole-line-or-region-mode auto-complete-mode magit-auto-revert-mode)
+  292
+  '(477 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/tmp/diagram1.svg"
+  "diagram1.svg"
+  'nxml-mode
+  '(global-auto-revert-mode yas/minor-mode projectile-mode whole-line-or-region-mode image-minor-mode magit-auto-revert-mode)
+  1719
+  '(1719 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/tomm/src/puppet/modules/yaps/manifests/autopush.pp"
+  "autopush.pp"
+  'fundamental-mode
+  '(global-auto-revert-mode projectile-mode whole-line-or-region-mode magit-auto-revert-mode)
+  22852
+  '(22797 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "puppet"
+  'dired-mode
+  '(global-auto-revert-mode projectile-mode whole-line-or-region-mode dired-omit-mode magit-auto-revert-mode)
+  142
+  '(nil nil)
+  t
+  '("/Users/tomm/src/puppet/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Applications/Emacs.app/Contents/Resources/lisp/loaddefs.el"
+  "loaddefs.el"
+  'emacs-lisp-mode
+  '(global-auto-revert-mode yas/minor-mode projectile-mode whole-line-or-region-mode auto-complete-mode magit-auto-revert-mode)
+  233516
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+

@@ -1,0 +1,31 @@
+;; Object app/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "app/"
+  :tables (list 
+   (semanticdb-table "index.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("pyroboard" section nil nil [83 162])
+            ("view1" section (:members 
+              ( ("view1" anchor nil nil [197 200])
+                ("view2" anchor nil nil [238 241]))              ) nil [162 390])
+            ("-->
+  <script src=\"../bower_components/angular/angular.js\">" section nil nil [390 485])
+            ("" section nil nil [485 550])
+            ("" section nil nil [550 627])
+            ("" section nil nil [627 663])
+            ("" section nil nil [663 704])
+            ("" section nil nil [704 748])
+            ("" section nil nil [748 788])
+            ("" section nil nil [788 845]))          
+    :file "index.html"
+    :pointmax 845
+    :fsize 844
+    :lastmodtime '(21340 27503 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!Seagate!Dropbox!site_angular!app!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

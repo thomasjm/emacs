@@ -1,0 +1,101 @@
+;; Object deployment/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "deployment/"
+  :tables (list 
+   (semanticdb-table "deploy.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("subprocess" include nil nil [20 44])
+            ("itertools" include nil nil [45 73])
+            ("os" include nil nil [74 106])
+            ("sys" include nil nil [74 106])
+            ("socket" include nil nil [74 106])
+            ("argparse" include nil nil [74 106])
+            ("git" include nil nil [107 124])
+            ("util" include nil nil [125 143])
+            ("getpass" include nil nil [144 171])
+            ("paramiko" include nil nil [172 187])
+            ("datetime" include nil nil [188 217])
+            ("PXBE_REPO_DEFAULT" variable nil nil [219 251])
+            ("PXFE_REPO_DEFAULT" variable nil nil [252 284])
+            ("CUSTOMER_REPO_FOLDER" variable nil nil [286 328])
+            ("PXBE_BRANCH_DEFAULT" variable nil nil [330 360])
+            ("PXFE_BRANCH_DEFAULT" variable nil nil [361 391])
+            ("GIT_SERVER" variable nil nil [393 456])
+            ("git_logentry_to_hash" function (:arguments 
+              ( ("logentry" variable nil (reparse-symbol function_parameters) [485 493]))              ) nil [460 527])
+            ("do_commit_on_release_repo" function (:arguments 
+              ( ("client" variable nil (reparse-symbol function_parameters) [558 564])
+                ("release_repo_folder" variable nil (reparse-symbol function_parameters) [566 585])
+                ("git_folder" variable nil (reparse-symbol function_parameters) [587 597])
+                ("commit_msg" variable nil (reparse-symbol function_parameters) [599 609])
+                ("customer_user" variable nil (reparse-symbol function_parameters) [611 624]))              ) nil [528 1553])
+            ("get_customers" function (:arguments 
+              ( ("client" variable nil (reparse-symbol function_parameters) [1573 1579]))              ) nil [1555 1743])
+            ("get_commit_options" function (:arguments 
+              ( ("repo" variable nil (reparse-symbol function_parameters) [1767 1771])
+                ("git" variable nil (reparse-symbol function_parameters) [1773 1776])
+                ("branch" variable nil (reparse-symbol function_parameters) [1778 1784])
+                ("pull" variable nil (reparse-symbol function_parameters) [1795 1799]))              ) nil [1744 3452])
+            ("checkout_pxbe" function (:arguments 
+              ( ("git_hash" variable nil (reparse-symbol function_parameters) [3471 3479])
+                ("pxbe_repo_folder" variable nil (reparse-symbol function_parameters) [3481 3497])
+                ("pxbe_repo" variable nil (reparse-symbol function_parameters) [3499 3508]))              ) nil [3453 3661])
+            ("build_pxbe" function (:arguments 
+              ( ("pxbe_repo_folder" variable nil (reparse-symbol function_parameters) [3677 3693])
+                ("repo" variable nil (reparse-symbol function_parameters) [3695 3699]))              ) nil [3662 3976])
+            ("test_pxbe" function (:arguments 
+              ( ("pxbe_repo_folder" variable nil (reparse-symbol function_parameters) [3991 4007]))              ) nil [3977 4203])
+            ("checkout_pxfe" function (:arguments 
+              ( ("git_hash" variable nil (reparse-symbol function_parameters) [4223 4231])
+                ("pxfe_repo_folder" variable nil (reparse-symbol function_parameters) [4233 4249])
+                ("pxfe_repo" variable nil (reparse-symbol function_parameters) [4251 4260]))              ) nil [4205 4413])
+            ("build_pxfe" function (:arguments 
+              ( ("pxfe_repo_folder" variable nil (reparse-symbol function_parameters) [4429 4445])
+                ("repo" variable nil (reparse-symbol function_parameters) [4447 4451]))              ) nil [4414 4903])
+            ("test_pxfe" function (:arguments 
+              ( ("pxfe_repo_folder" variable nil (reparse-symbol function_parameters) [4918 4934]))              ) nil [4904 5210])
+            ("get_ssh_client" function (:arguments 
+              ( ("host" variable nil (reparse-symbol function_parameters) [5230 5234])
+                ("user" variable nil (reparse-symbol function_parameters) [5236 5240])
+                ("use_pw" variable nil (reparse-symbol function_parameters) [5242 5248]))              ) nil [5211 6786])
+            ("get_args" function nil nil [6787 9984])
+            ("main" function nil nil [9986 15923])
+            ("if" code nil nil [15991 16029]))          
+    :file "deploy.py"
+    :pointmax 16029
+    :fsize 16028
+    :lastmodtime '(21232 55750 0 0)
+    :unmatched-syntax '((INDENT_BLOCK 15240 . 15259) (NEWLINE 15239 . 15240) (COLON 15238 . 15239) (TRY 14949 . 14952) (AS 15234 . 15236) (NAME 14634 . 14644) (IF 14659 . 14661) (ELSE 14679 . 14683) (INDENT_BLOCK 3311 . 3397) (NEWLINE 3310 . 3311) (COLON 3309 . 3310) (TRY 2020 . 2023) (AS 3305 . 3307))
+    )
+   (semanticdb-table "util.py"
+    :file "util.py"
+    :fsize 3050
+    :lastmodtime '(21223 3547 0 0)
+    )
+   (semanticdb-table "grab_deployment_files.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [16 40])
+            ("argparse" include nil nil [16 40])
+            ("os" include nil nil [16 40])
+            ("subprocess" include nil nil [41 58])
+            ("util" include nil nil [59 77])
+            ("main" function nil nil [79 1227])
+            ("copy_deploy_files" function (:arguments 
+              ( ("source_folder" variable nil (reparse-symbol function_parameters) [1255 1268])
+                ("deploy_file" variable nil (reparse-symbol function_parameters) [1270 1281])
+                ("dest_folder" variable nil (reparse-symbol function_parameters) [1283 1294])
+                ("customer_user" variable nil (reparse-symbol function_parameters) [1296 1309]))              ) nil [1233 2848])
+            ("if" code nil nil [2853 2891]))          
+    :file "grab_deployment_files.py"
+    :pointmax 2891
+    :fsize 2890
+    :lastmodtime '(21244 863 0 0)
+    :unmatched-syntax '((NAME 2012 . 2025) (IF 2076 . 2078) (ELSE 2089 . 2093) (NAME 1923 . 1936) (IF 1970 . 1972) (ELSE 1983 . 1987) (NAME 1851 . 1861) (IF 1888 . 1890) (ELSE 1901 . 1905) (NAME 1801 . 1811) (IF 1820 . 1822) (ELSE 1833 . 1837))
+    )
+   )
+  :file "!Users!tom!code!ops!deployment!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

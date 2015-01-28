@@ -1,0 +1,21 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".stackoverflow.com"
+  [url-cookie "HttpOnly" nil "01-Jan-2055 00:00:00.00 GMT" "/" ".stackoverflow.com" nil]
+  [url-cookie "prov" "e6e6d94d-e66d-4196-8541-1b18ff2bfdeb" "01-Jan-2055 00:00:00.00 GMT" "/" ".stackoverflow.com" nil])
+ (".google.com"
+  [url-cookie "NID" "67=Fwp2qOuwyaB-MXoi_fUN397CHi9BnnGd-HQje-gl-m9sheYYywbL7sr-sunLKqdYMqszh6pYqnysosVb9FLH4cP47qJyxsj8SLpSc5Xf2LXzezPBbJSVkzEHRgvtF4_d" "20-Jun-2015 21:14:17.00 GMT" "/" ".google.com" nil]
+  [url-cookie "PREF" "ID=8c3f153757f10bb3:U=c529d65e9e168378:FF=0:TM=1419023657:LM=1419023666:S=rYx_PU2y1Zo2H2Nk" "18-Dec-2016 21:14:26.00 GMT" "/" ".google.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '(("accounts.google.com"
+  [url-cookie "Priority" "HIGH" "18-Dec-2016 21:21:04.00 GMT" "/" "accounts.google.com" t]
+  [url-cookie "GAPS" "1:mPlo7PeGaUVVvCRhZHVMedxUvlcfaw:ALUSMiE7wkvR4oSV" "18-Dec-2016 21:21:04.00 GMT" "/" "accounts.google.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

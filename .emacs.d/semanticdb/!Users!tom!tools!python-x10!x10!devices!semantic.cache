@@ -1,0 +1,95 @@
+;; Object devices/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "devices/"
+  :tables (list 
+   (semanticdb-table "actuators.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("math" include nil nil [1 12])
+            ("x10.protocol" include nil nil [13 47])
+            ("AbstractX10Actuator" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [141 163])
+                            ("self" variable nil (reparse-symbol indented_block_body) [172 201]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [101 105])
+                            ("x10addr" variable nil (reparse-symbol function_parameters) [107 114])
+                            ("aX10Controller" variable nil (reparse-symbol function_parameters) [116 130]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [88 202]))                  
+                :type "class")
+                nil [49 202])
+            ("SwitchableX10Actuator" type
+               (:superclasses ("AbstractX10Actuator")
+                :members 
+                  ( ("on" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [442 446]))                          
+                        :documentation "
+        Turn on
+        ")
+                        (reparse-symbol indented_block_body) [435 575])
+                    ("off" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [588 592]))                          
+                        :documentation "
+        Turn off
+        ")
+                        (reparse-symbol indented_block_body) [580 723]))                  
+                :type "class")
+                nil [381 723])
+            ("DimmableX10Actuator" type
+               (:superclasses ("AbstractX10Actuator")
+                :members 
+                  ( ("dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [784 788])
+                            ("amount" variable nil (reparse-symbol function_parameters) [790 796]))                          
+                        :documentation "
+        Reduce voltage
+        ")
+                        (reparse-symbol indented_block_body) [776 914])
+                    ("bright" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [930 934])
+                            ("amount" variable nil (reparse-symbol function_parameters) [936 942]))                          
+                        :documentation "
+        Augment voltage
+        ")
+                        (reparse-symbol indented_block_body) [919 1098])
+                    ("adjust" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1114 1118])
+                            ("amount" variable nil (reparse-symbol function_parameters) [1120 1126]))                          
+                        :documentation "
+        Augment or reduce voltage
+        ")
+                        (reparse-symbol indented_block_body) [1103 1335]))                  
+                :type "class")
+                nil [724 1335])
+            ("GenericX10Actuator" type
+               (:superclasses ("SwitchableX10Actuator" "DimmableX10Actuator")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1435 1439]))                  
+                :type "class")
+                nil [1336 1440]))          
+    :file "actuators.py"
+    :pointmax 1440
+    :fsize 1439
+    :lastmodtime '(21293 16998 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!tools!python-x10!x10!devices!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

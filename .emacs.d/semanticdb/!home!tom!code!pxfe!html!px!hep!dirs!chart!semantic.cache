@@ -1,0 +1,36 @@
+;; Object chart/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "chart/"
+  :tables (list 
+   (semanticdb-table "chart-editor.htm"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Metric: {{getAggregationField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [428 431])
+            ("Metric: {{getAggregationField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [784 787])
+            ("Metric: {{getAggregationField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [1141 1144])
+            ("Metric: {{getAggregationField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [1511 1514])
+            ("Metric: {{getAggregationField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [1889 1892])
+            ("Metric: {{getAggregationField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [2260 2263])
+            ("Metric: {{getAggregationField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [2678 2681])
+            ("{{getAggregationFunctionName() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [3366 3369])
+            ("Number of" anchor nil nil [3764 3767])
+            ("Average" anchor nil nil [4111 4114])
+            ("Minimum" anchor nil nil [4382 4385])
+            ("Maximum" anchor nil nil [4649 4652])
+            ("Sum" anchor nil nil [4916 4919])
+            ("Group by: {{getGroupByField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [5219 5222])
+            ("Automatic" anchor nil nil [8709 8712])
+            ("Vertical" anchor nil nil [8979 8982])
+            ("Horizontal" anchor nil nil [9249 9252])
+            ("Other Metric: {{getOtherAggregationField().getPath() || 'Select...'}}<i class=\"fa fa-caret-down\">" anchor nil nil [9642 9645]))          
+    :file "chart-editor.htm"
+    :pointmax 10206
+    :fsize 10205
+    :lastmodtime '(21324 52736 306950 345000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!tom!code!pxfe!html!px!hep!dirs!chart!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

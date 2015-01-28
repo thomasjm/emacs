@@ -1,0 +1,1535 @@
+;; Object lyx_minimal/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lyx_minimal/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("config.h" include (:system-flag t) nil [265 284])
+            ("LyX.h" include nil nil [286 302])
+            ("support/debug.h" include nil nil [304 330])
+            ("support/os.h" include nil nil [331 354])
+            ("iostream" include (:system-flag t) nil [356 375])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [377 397])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [409 418])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [419 433]))                  
+                :type "int")
+                nil [400 499]))          
+    :file "main.cpp"
+    :pointmax 500
+    :fsize 500
+    :lastmodtime '(21132 23399 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "CutAndPaste.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("config.h" include (:system-flag t) nil [318 337])
+            ("CutAndPaste.h" include nil nil [339 363])
+            ("BranchList.h" include nil nil [365 388])
+            ("Buffer.h" include nil nil [389 408])
+            ("buffer_funcs.h" include nil nil [409 434])
+            ("BufferList.h" include nil nil [435 458])
+            ("BufferParams.h" include nil nil [459 484])
+            ("BufferView.h" include nil nil [485 508])
+            ("Changes.h" include nil nil [509 529])
+            ("Cursor.h" include nil nil [530 549])
+            ("Encoding.h" include nil nil [550 571])
+            ("ErrorList.h" include nil nil [572 594])
+            ("FuncCode.h" include nil nil [595 616])
+            ("FuncRequest.h" include nil nil [617 641])
+            ("InsetIterator.h" include nil nil [642 668])
+            ("InsetList.h" include nil nil [669 691])
+            ("Language.h" include nil nil [692 713])
+            ("LyX.h" include nil nil [714 730])
+            ("LyXRC.h" include nil nil [731 749])
+            ("Text.h" include nil nil [750 767])
+            ("Paragraph.h" include nil nil [768 790])
+            ("ParagraphParameters.h" include nil nil [791 823])
+            ("ParIterator.h" include nil nil [824 848])
+            ("TextClass.h" include nil nil [849 871])
+            ("insets/InsetBibitem.h" include nil nil [873 905])
+            ("insets/InsetBranch.h" include nil nil [906 937])
+            ("insets/InsetCommand.h" include nil nil [938 970])
+            ("insets/InsetFlex.h" include nil nil [971 1000])
+            ("insets/InsetGraphics.h" include nil nil [1001 1034])
+            ("insets/InsetGraphicsParams.h" include nil nil [1035 1074])
+            ("insets/InsetInclude.h" include nil nil [1075 1107])
+            ("insets/InsetLabel.h" include nil nil [1108 1138])
+            ("insets/InsetTabular.h" include nil nil [1139 1171])
+            ("mathed/MathData.h" include nil nil [1173 1201])
+            ("mathed/InsetMath.h" include nil nil [1202 1231])
+            ("mathed/InsetMathHull.h" include nil nil [1232 1265])
+            ("mathed/InsetMathRef.h" include nil nil [1266 1298])
+            ("mathed/MathSupport.h" include nil nil [1299 1330])
+            ("support/debug.h" include nil nil [1332 1358])
+            ("support/docstream.h" include nil nil [1359 1389])
+            ("support/gettext.h" include nil nil [1390 1418])
+            ("support/lassert.h" include nil nil [1419 1447])
+            ("support/limited_stack.h" include nil nil [1448 1482])
+            ("support/lstrings.h" include nil nil [1483 1512])
+            ("frontends/alert.h" include nil nil [1514 1542])
+            ("frontends/Clipboard.h" include nil nil [1543 1575])
+            ("frontends/Selection.h" include nil nil [1576 1608])
+            ("boost/tuple/tuple.hpp" include (:system-flag t) nil [1610 1642])
+            ("boost/next_prior.hpp" include (:system-flag t) nil [1643 1674])
+            ("string" include (:system-flag t) nil [1676 1693])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1695 1715])
+            ("lyx::support" using (:type ("lyx::support" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1716 1745])
+            ("lyx::frontend::Clipboard" using (:type ("lyx::frontend::Clipboard" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1746 1777])
+            ("lyx" type
+               (:members 
+                  ( ("unnamed" type
+                       (:members 
+                          ( ("PitPosPair" type
+                               (:typedef ("pair" type
+                                     (:template-specifier 
+                                        ( ("pit_type" type nil nil nil)
+                                          ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "pair"
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1809 1848])
+                            ("CutStack" type
+                               (:typedef ("limited_stack" type
+                                     (:template-specifier 
+                                        ( ("pair" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "limited_stack"
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1850 1926])
+                            ("theCuts" function
+                               (:prototype-flag t
+                                :type ("CutStack" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1928 1949])
+                            ("selectionBuffer" function
+                               (:prototype-flag t
+                                :type ("CutStack" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2008 2036])
+                            ("dirty_tabular_stack_" variable (:type "bool") (reparse-symbol namespacesubparts) [2240 2274])
+                            ("checkPastePossible" function
+                               (:arguments 
+                                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [2301 2311]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2277 2388])
+                            ("PasteReturnValue" type
+                               (:members 
+                                  ( ("PasteReturnValue" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("r_par" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2435 2450])
+                                            ("r_pos" variable (:type ("pos_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2451 2466])
+                                            ("r_nu" variable (:type "bool") (reparse-symbol arg-sub-list) [2467 2477]))                                          
+                                        :type ("PasteReturnValue" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [2418 2527])
+                                    ("par" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2530 2543])
+                                    ("pos" variable (:type ("pos_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2545 2558])
+                                    ("needupdate" variable (:type "bool") (reparse-symbol classsubparts) [2560 2576]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [2391 2579])
+                            ("pasteSelectionHelper" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DocIterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2619 2643])
+                                    ("parlist" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ParagraphList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2644 2674])
+                                    ("oldDocClass" variable (:type ("DocumentClassConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2696 2730])
+                                    ("tmpbuffer" variable
+                                       (:pointer 1
+                                        :type ("Buffer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2731 2750])
+                                    ("errorlist" variable
+                                       (:reference 1
+                                        :type ("ErrorList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2772 2794]))                                  
+                                :type ("PasteReturnValue" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2581 13843])
+                            ("eraseSelectionHelper" function
+                               (:arguments 
+                                  ( ("params" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("BufferParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13878 13906])
+                                    ("pars" variable
+                                       (:reference 1
+                                        :type ("ParagraphList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13908 13929])
+                                    ("startpit" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13931 13949])
+                                    ("endpit" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13950 13966])
+                                    ("startpos" variable (:type "int") (reparse-symbol arg-sub-list) [13968 13981])
+                                    ("endpos" variable (:type "int") (reparse-symbol arg-sub-list) [13982 13993]))                                  
+                                :type ("PitPosPair" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [13846 15202])
+                            ("putClipboard" function
+                               (:arguments 
+                                  ( ("paragraphs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ParagraphList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15223 15256])
+                                    ("docclass" variable (:type ("DocumentClassConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15259 15290])
+                                    ("plaintext" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("docstring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15291 15319]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [15205 17566])
+                            ("isFullyDeleted" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("pars" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ParagraphList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17650 17677]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [17623 17963])
+                            ("copySelectionHelper" function
+                               (:arguments 
+                                  ( ("buf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Buffer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17991 18010])
+                                    ("text" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Text" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18011 18029])
+                                    ("startpit" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18031 18049])
+                                    ("endpit" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18050 18066])
+                                    ("start" variable (:type "int") (reparse-symbol arg-sub-list) [18068 18078])
+                                    ("end" variable (:type "int") (reparse-symbol arg-sub-list) [18079 18087])
+                                    ("dc" variable (:type ("DocumentClassConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18088 18113])
+                                    ("cutstack" variable
+                                       (:reference 1
+                                        :type ("CutStack" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18114 18134]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [17966 20208]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1796 20211])
+                    ("cap" type
+                       (:members 
+                          ( ("region" function
+                               (:arguments 
+                                  ( ("i1" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CursorSlice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20263 20286])
+                                    ("i2" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CursorSlice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20287 20310])
+                                    ("r1" variable
+                                       (:reference 1
+                                        :type ("Inset::row_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20316 20337])
+                                    ("r2" variable
+                                       (:reference 1
+                                        :type ("Inset::row_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20338 20359])
+                                    ("c1" variable
+                                       (:reference 1
+                                        :type ("Inset::col_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20365 20386])
+                                    ("c2" variable
+                                       (:reference 1
+                                        :type ("Inset::col_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20387 20408]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [20251 20589])
+                            ("grabAndEraseSelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20624 20637]))                                  
+                                :type ("docstring" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [20592 20758])
+                            ("reduceSelectionToOneCell" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20791 20804]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [20761 21183])
+                            ("multipleCellsSelected" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [21213 21232]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [21186 21471])
+                            ("switchBetweenClasses" function
+                               (:arguments 
+                                  ( ("oldone" variable (:type ("DocumentClassConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21500 21529])
+                                    ("newone" variable (:type ("DocumentClassConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21532 21561])
+                                    ("in" variable
+                                       (:reference 1
+                                        :type ("InsetText" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [21562 21577])
+                                    ("errorlist" variable
+                                       (:reference 1
+                                        :type ("ErrorList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [21578 21600]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [21474 23747])
+                            ("availableSelections" function
+                               (:arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Buffer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [23788 23807]))                                  
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("docstring" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [23750 24607])
+                            ("numberOfSelections" function (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [24610 24668])
+                            ("cutSelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [24689 24702])
+                                    ("doclear" variable (:type "bool") (reparse-symbol arg-sub-list) [24703 24716])
+                                    ("realcut" variable (:type "bool") (reparse-symbol arg-sub-list) [24717 24730]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [24671 26898])
+                            ("copySelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [26920 26939]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [26901 26993])
+                            ("copyInset" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [27011 27030])
+                                    ("inset" variable
+                                       (:pointer 1
+                                        :type ("Inset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [27031 27045])
+                                    ("plaintext" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("docstring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [27046 27074]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [26996 27533])
+                            ("unnamed" type
+                               (:members 
+                                  ( ("copySelectionToStack" function
+                                       (:arguments 
+                                          ( ("cur" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Cursor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [27575 27594])
+                                            ("cutstack" variable
+                                               (:reference 1
+                                                :type ("CutStack" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [27595 27615]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [27549 29077]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [27536 29080])
+                            ("copySelectionToStack" function (:type "void") (reparse-symbol namespacesubparts) [29083 29181])
+                            ("copySelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29203 29222])
+                                    ("plaintext" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("docstring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29223 29251]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [29184 30051])
+                            ("saveSelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30073 30092]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [30054 30558])
+                            ("selection" function (:type "bool") (reparse-symbol namespacesubparts) [30561 30615])
+                            ("clearSelection" function (:type "void") (reparse-symbol namespacesubparts) [30618 30669])
+                            ("clearCutStack" function (:type "void") (reparse-symbol namespacesubparts) [30672 30714])
+                            ("selection" function
+                               (:arguments 
+                                  ( ("sel_index" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30737 30754]))                                  
+                                :type ("docstring" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [30717 30888])
+                            ("pasteParagraphList" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30915 30928])
+                                    ("parlist" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ParagraphList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30929 30959])
+                                    ("docclass" variable (:type ("DocumentClassConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30963 30994])
+                                    ("errorList" variable
+                                       (:reference 1
+                                        :type ("ErrorList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30995 31017]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [30891 31355])
+                            ("pasteFromStack" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31378 31391])
+                                    ("errorList" variable
+                                       (:reference 1
+                                        :type ("ErrorList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31392 31414])
+                                    ("sel_index" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31415 31432]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [31358 31678])
+                            ("pasteClipboardText" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31705 31718])
+                                    ("errorList" variable
+                                       (:reference 1
+                                        :type ("ErrorList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31719 31741])
+                                    ("asParagraphs" variable (:type "bool") (reparse-symbol arg-sub-list) [31742 31760])
+                                    ("type" variable (:type ("Clipboard::TextType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31785 31810]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [31681 34207])
+                            ("pasteSimpleText" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [34231 34244])
+                                    ("asParagraphs" variable (:type "bool") (reparse-symbol arg-sub-list) [34245 34263]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [34210 34995])
+                            ("pasteClipboardGraphics" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [35026 35039])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("ErrorList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [35040 35068])
+                                    ("preferedType" variable (:type ("Clipboard::GraphicsType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35076 35113]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [34998 35575])
+                            ("pasteSelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [35598 35611])
+                                    ("errorList" variable
+                                       (:reference 1
+                                        :type ("ErrorList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [35612 35634]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [35578 35793])
+                            ("replaceSelectionWithString" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [35828 35841])
+                                    ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("docstring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [35842 35864]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [35796 36466])
+                            ("replaceSelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [36491 36504]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [36469 36564])
+                            ("eraseSelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [36587 36600]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [36567 37575])
+                            ("selDel" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [37590 37603]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [37578 37688])
+                            ("selClearOrDel" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [37710 37723]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [37691 37849])
+                            ("grabSelection" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [37876 37895]))                                  
+                                :type ("docstring" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [37852 39112])
+                            ("dirtyTabularStack" function
+                               (:arguments 
+                                  ( ("b" variable (:type "bool") (reparse-symbol arg-sub-list) [39138 39145]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [39115 39176])
+                            ("tabularStackDirty" function (:type "bool") (reparse-symbol namespacesubparts) [39179 39237]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [20234 39241]))                  
+                :type "namespace")
+                nil [1779 39260]))          
+    :file "CutAndPaste.cpp"
+    :pointmax 39278
+    :fsize 39279
+    :lastmodtime '(21132 23149 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "CutAndPaste.h"
+    :file "CutAndPaste.h"
+    :fsize 6290
+    :lastmodtime '(21132 23149 0 0)
+    )
+   (semanticdb-table "Cursor.h"
+    :file "Cursor.h"
+    :fsize 17624
+    :lastmodtime '(21132 23072 0 0)
+    )
+   (semanticdb-table "Dimension.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DIMENSION_H" variable (:constant-flag t) nil [272 283])
+            ("lyx" type
+               (:members 
+                  ( ("Dimension" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [357 364])
+                            ("Dimension" function
+                               (:constructor-flag t
+                                :type ("Dimension" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [383 422])
+                            ("Dimension" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [455 461])
+                                    ("a" variable (:type "int") (reparse-symbol arg-sub-list) [462 468])
+                                    ("d" variable (:type "int") (reparse-symbol arg-sub-list) [469 475]))                                  
+                                :type ("Dimension" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [445 503])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("dim" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Dimension" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [528 550]))                                  
+                                :type ("Dimension" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [506 622])
+                            ("+=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("dim" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Dimension" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [663 685]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [647 686])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [710 747])
+                            ("height" function (:type "int") (reparse-symbol classsubparts) [765 805])
+                            ("ascent" function (:type "int") (reparse-symbol classsubparts) [823 857])
+                            ("descent" function (:type "int") (reparse-symbol classsubparts) [876 911])
+                            ("width" function (:type "int") (reparse-symbol classsubparts) [928 961])
+                            ("public" label nil (reparse-symbol classsubparts) [1109 1116])
+                            ("wid" variable (:type "int") (reparse-symbol classsubparts) [1366 1374])
+                            ("asc" variable (:type "int") (reparse-symbol classsubparts) [1388 1396])
+                            ("des" variable (:type "int") (reparse-symbol classsubparts) [1411 1419]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [339 1422])
+                    ("==" function
+                       (:operator-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Dimension" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1447 1467])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Dimension" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1468 1488]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1424 1553])
+                    ("!=" function
+                       (:operator-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Dimension" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1579 1599])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Dimension" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1600 1620]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1556 1685])
+                    ("Point" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1701 1708])
+                            ("Point" function
+                               (:constructor-flag t
+                                :type ("Point" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1710 1738])
+                            ("Point" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [1747 1753])
+                                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [1754 1760]))                                  
+                                :type ("Point" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1741 1761])
+                            ("y_" variable (:type "int") (reparse-symbol classsubparts) [1764 1775])
+                            ("x_" variable (:type "int") (reparse-symbol classsubparts) [1764 1775]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1687 1778]))                  
+                :type "namespace")
+                nil [285 1781]))          
+    :file "Dimension.h"
+    :pointmax 1807
+    :fsize 1808
+    :lastmodtime '(21132 23149 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DIMENSION_H")
+          )
+
+    )
+   (semanticdb-table "Dimension.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("config.h" include (:system-flag t) nil [232 251])
+            ("Dimension.h" include nil nil [253 275])
+            ("lyx" type
+               (:members 
+                  ( ("+=" function
+                       (:operator-flag t
+                        :parent "Dimension"
+                        :arguments 
+                          ( ("dim" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Dimension" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [321 343]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [294 438]))                  
+                :type "namespace")
+                nil [277 441]))          
+    :file "Dimension.cpp"
+    :pointmax 459
+    :fsize 460
+    :lastmodtime '(21132 23149 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Cursor.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("config.h" include (:system-flag t) nil [348 367])
+            ("Bidi.h" include nil nil [369 386])
+            ("Buffer.h" include nil nil [387 406])
+            ("BufferView.h" include nil nil [407 430])
+            ("CoordCache.h" include nil nil [431 454])
+            ("Cursor.h" include nil nil [455 474])
+            ("CutAndPaste.h" include nil nil [475 499])
+            ("DispatchResult.h" include nil nil [500 527])
+            ("Encoding.h" include nil nil [528 549])
+            ("Font.h" include nil nil [550 567])
+            ("FuncCode.h" include nil nil [568 589])
+            ("FuncRequest.h" include nil nil [590 614])
+            ("Language.h" include nil nil [615 636])
+            ("Layout.h" include nil nil [637 656])
+            ("LyXAction.h" include nil nil [657 679])
+            ("LyXRC.h" include nil nil [680 698])
+            ("Paragraph.h" include nil nil [699 721])
+            ("ParIterator.h" include nil nil [722 746])
+            ("Row.h" include nil nil [747 763])
+            ("Text.h" include nil nil [764 781])
+            ("TextMetrics.h" include nil nil [782 806])
+            ("TocBackend.h" include nil nil [807 830])
+            ("support/debug.h" include nil nil [832 858])
+            ("support/docstream.h" include nil nil [859 889])
+            ("support/ExceptionMessage.h" include nil nil [890 927])
+            ("support/gettext.h" include nil nil [928 956])
+            ("support/lassert.h" include nil nil [957 985])
+            ("insets/InsetTabular.h" include nil nil [987 1019])
+            ("insets/InsetText.h" include nil nil [1020 1049])
+            ("mathed/InsetMath.h" include nil nil [1051 1080])
+            ("mathed/InsetMathBrace.h" include nil nil [1081 1115])
+            ("mathed/InsetMathScript.h" include nil nil [1116 1151])
+            ("mathed/MacroTable.h" include nil nil [1152 1182])
+            ("mathed/MathData.h" include nil nil [1183 1211])
+            ("mathed/MathMacro.h" include nil nil [1212 1241])
+            ("support/bind.h" include nil nil [1243 1268])
+            ("sstream" include (:system-flag t) nil [1270 1288])
+            ("limits" include (:system-flag t) nil [1289 1306])
+            ("map" include (:system-flag t) nil [1307 1321])
+            ("algorithm" include (:system-flag t) nil [1322 1342])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1344 1364])
+            ("lyx" type
+               (:members 
+                  ( ("unnamed" type
+                       (:members 
+                          ( ("positionable" function
+                               (:arguments 
+                                  ( ("cursor" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DocIterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1414 1441])
+                                    ("anchor" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DocIterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1442 1469]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1396 1781])
+                            ("bruteFind2" function
+                               (:arguments 
+                                  ( ("c" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1888 1905])
+                                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [1906 1912])
+                                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [1913 1919]))                                  
+                                :type ("DocIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1865 3124]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1383 6666])
+                    ("CursorData" function
+                       (:constructor-flag t
+                        :parent "CursorData"
+                        :type ("CursorData" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6687 6853])
+                    ("CursorData" function
+                       (:constructor-flag t
+                        :parent "CursorData"
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type ("Buffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6879 6895]))                          
+                        :type ("CursorData" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6856 7043])
+                    ("CursorData" function
+                       (:constructor-flag t
+                        :parent "CursorData"
+                        :arguments 
+                          ( ("dit" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("DocIterator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7069 7093]))                          
+                        :type ("CursorData" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7046 7238])
+                    ("Cursor" function
+                       (:constructor-flag t
+                        :parent "Cursor"
+                        :arguments 
+                          ( ("bv" variable
+                               (:reference 1
+                                :type ("BufferView" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7360 7376]))                          
+                        :type ("Cursor" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7345 7458])
+                    ("reset" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7461 7715])
+                    ("setCursor" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("cur" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("DocIterator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7812 7836]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7789 7870])
+                    ("setCursorToAnchor" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7873 8127])
+                    ("setCursorData" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CursorData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8157 8181]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8130 8215])
+                    ("getStatus" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("cmd" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("FuncRequest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8241 8265])
+                            ("status" variable
+                               (:reference 1
+                                :type ("FuncStatus" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8266 8286]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [8218 9447])
+                    ("saveBeforeDispatchPosXY" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9450 9543])
+                    ("dispatch" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("cmd0" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("FuncRequest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9568 9593]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9546 12088])
+                    ("result" function
+                       (:parent "Cursor"
+                        :type ("DispatchResult" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12091 12155])
+                    ("bv" function
+                       (:parent "Cursor"
+                        :type ("BufferView" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12158 12222])
+                    ("pop" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12225 12284])
+                    ("push" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Inset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12305 12315]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12287 12372])
+                    ("pushBackward" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Inset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12401 12411]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12375 12530])
+                    ("popBackward" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [12533 12654])
+                    ("popForward" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [12657 12931])
+                    ("currentMode" function
+                       (:parent "Cursor"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [12934 13370])
+                    ("getPos" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13393 13401])
+                            ("y" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13402 13410]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13373 13473])
+                    ("textRow" function
+                       (:parent "Cursor"
+                        :type ("Row" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [13476 13666])
+                    ("resetAnchor" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13669 13742])
+                    ("markNewWordPosition" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13745 14047])
+                    ("clearNewWordPosition" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [14050 14234])
+                    ("checkNewWordPosition" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [14237 15202])
+                    ("posBackward" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [15205 15292])
+                    ("posForward" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [15295 15389])
+                    ("posVisRight" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("skip_inset" variable (:type "bool") (reparse-symbol arg-sub-list) [15417 15433]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [15392 18690])
+                    ("posVisLeft" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("skip_inset" variable (:type "bool") (reparse-symbol arg-sub-list) [18717 18733]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [18693 21933])
+                    ("getSurroundingPos" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("left_pos" variable
+                               (:reference 1
+                                :type ("pos_type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21967 21987])
+                            ("right_pos" variable
+                               (:reference 1
+                                :type ("pos_type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21988 22009]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [21936 25969])
+                    ("posVisToNewRow" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("movingLeft" variable (:type "bool") (reparse-symbol arg-sub-list) [26000 26016]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [25972 27551])
+                    ("posVisToRowExtremity" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("left" variable (:type "bool") (reparse-symbol arg-sub-list) [27588 27598]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [27554 32932])
+                    ("normalAnchor" function
+                       (:parent "Cursor"
+                        :type ("CursorSlice" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [32935 33483])
+                    ("realAnchor" function
+                       (:parent "Cursor"
+                        :type ("DocIterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [33486 33541])
+                    ("selBegin" function
+                       (:parent "Cursor"
+                        :type ("CursorSlice" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [33544 33676])
+                    ("selEnd" function
+                       (:parent "Cursor"
+                        :type ("CursorSlice" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [33679 33809])
+                    ("selectionBegin" function
+                       (:parent "Cursor"
+                        :type ("DocIterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [33812 34193])
+                    ("selectionEnd" function
+                       (:parent "Cursor"
+                        :type ("DocIterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [34196 34623])
+                    ("setSelection" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [34626 34893])
+                    ("setSelection" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("where" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("DocIterator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34922 34948])
+                            ("n" variable (:type "int") (reparse-symbol arg-sub-list) [34949 34955]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [34896 35030])
+                    ("clearSelection" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [35033 35147])
+                    ("setTargetX" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [35174 35180]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [35150 35224])
+                    ("x_target" function
+                       (:parent "Cursor"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [35227 35278])
+                    ("clearTargetX" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [35281 35353])
+                    ("updateTextTargetOffset" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [35356 35464])
+                    ("info" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("odocstream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [35485 35501]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [35467 35814])
+                    ("selHandle" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("sel" variable (:type "bool") (reparse-symbol arg-sub-list) [35840 35849]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [35817 36055])
+                    ("<<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36079 36092])
+                            ("cur" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Cursor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36093 36112]))                          
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [36058 36631])
+                    ("<<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("LyXErr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36654 36666])
+                            ("cur" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Cursor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36667 36686]))                          
+                        :type ("LyXErr" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [36634 36723]))                  
+                :type "namespace")
+                nil [1366 36727])
+            ("mathed/InsetMathChar.h" include nil nil [37093 37126])
+            ("mathed/InsetMathGrid.h" include nil nil [37127 37160])
+            ("mathed/InsetMathScript.h" include nil nil [37161 37196])
+            ("mathed/InsetMathUnknown.h" include nil nil [37197 37233])
+            ("mathed/MathFactory.h" include nil nil [37234 37265])
+            ("mathed/MathStream.h" include nil nil [37266 37296])
+            ("mathed/MathSupport.h" include nil nil [37297 37328])
+            ("lyx" type
+               (:members 
+                  ( ("isInside" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Inset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [37370 37386]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [37348 37501])
+                    ("leaveInset" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("inset" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Inset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [37528 37548]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [37504 37667])
+                    ("openable" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MathAtom" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [37692 37711]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [37670 38007])
+                    ("setScreenPos" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [38036 38042])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [38043 38053]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [38010 38143])
+                    ("plainErase" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [38147 38198])
+                    ("markInsert" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [38201 38253])
+                    ("markErase" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [38256 38306])
+                    ("plainInsert" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MathAtom" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [38334 38353]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [38309 38471])
+                    ("insert" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("docstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [38494 38516]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [38474 38641])
+                    ("insert" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("c" variable (:type ("char_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38664 38676]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [38644 38891])
+                    ("insert" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MathAtom" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [38914 38933]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [38894 39063])
+                    ("insert" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("inset0" variable
+                               (:pointer 1
+                                :type ("Inset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [39086 39101]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [39066 39349])
+                    ("niceInsert" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("docstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [39375 39395])
+                            ("f" variable (:type ("Parse::flags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39396 39411])
+                            ("enter" variable (:type "bool") (reparse-symbol arg-sub-list) [39412 39423]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [39352 39578])
+                    ("niceInsert" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MathAtom" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [39605 39624]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [39581 40406])
+                    ("insert" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("ar" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MathData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [40429 40449]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [40409 40635])
+                    ("backspace" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [40638 41551])
+                    ("erase" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [41554 42443])
+                    ("up" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [42446 42679])
+                    ("down" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [42682 42921])
+                    ("macroModeClose" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [42924 44805])
+                    ("macroName" function
+                       (:parent "Cursor"
+                        :type ("docstring" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [44808 44902])
+                    ("handleNest" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MathAtom" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44929 44948])
+                            ("c" variable (:type "int") (reparse-symbol arg-sub-list) [44949 44955]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [44905 45150])
+                    ("targetX" function
+                       (:parent "Cursor"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [45153 45278])
+                    ("textTargetOffset" function
+                       (:parent "Cursor"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [45281 45348])
+                    ("setTargetX" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [45351 45427])
+                    ("inMacroMode" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [45430 45637])
+                    ("activeMacro" function
+                       (:pointer 1
+                        :parent "Cursor"
+                        :type ("InsetMathUnknown" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [45640 45752])
+                    ("activeMacro" function
+                       (:pointer 1
+                        :parent "Cursor"
+                        :type ("InsetMathUnknown" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [45755 45879])
+                    ("pullArg" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [45882 46093])
+                    ("touch" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [46096 46285])
+                    ("normalize" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [46288 46835])
+                    ("upDownInMath" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("up" variable (:type "bool") (reparse-symbol arg-sub-list) [46864 46872]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [46838 49974])
+                    ("atFirstOrLastRow" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("up" variable (:type "bool") (reparse-symbol arg-sub-list) [50007 50015]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [49977 50422])
+                    ("upDownInText" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("up" variable (:type "bool") (reparse-symbol arg-sub-list) [50451 50459])
+                            ("updateNeeded" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [50460 50480]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [50425 55025])
+                    ("handleFont" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("font" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [55053 55073]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [55029 55835])
+                    ("message" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("docstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [55859 55881]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [55838 55915])
+                    ("errorMessage" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("docstring" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [55944 55966]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [55918 56023])
+                    ("unnamed" type
+                       (:members 
+                          ( ("parbreak" function
+                               (:arguments 
+                                  ( ("cur" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Cursor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [56058 56077]))                                  
+                                :type ("docstring" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [56039 56326]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [56026 56329])
+                    ("selectionAsString" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("with_label" variable (:type "bool") (reparse-symbol arg-sub-list) [56368 56384]))                          
+                        :type ("docstring" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [56332 57602])
+                    ("currentState" function
+                       (:parent "Cursor"
+                        :type ("docstring" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [57605 57801])
+                    ("getPossibleLabel" function
+                       (:parent "Cursor"
+                        :type ("docstring" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [57804 57924])
+                    ("getEncoding" function
+                       (:pointer 1
+                        :parent "Cursor"
+                        :type ("Encoding" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [57927 58222])
+                    ("undispatched" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [58225 58288])
+                    ("dispatched" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [58291 58351])
+                    ("screenUpdateFlags" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("f" variable (:type ("Update::flags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58385 58401]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [58354 58435])
+                    ("forceBufferUpdate" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [58438 58508])
+                    ("clearBufferUpdate" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [58511 58581])
+                    ("needBufferUpdate" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [58584 58659])
+                    ("noScreenUpdate" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [58662 58736])
+                    ("getFont" function
+                       (:parent "Cursor"
+                        :type ("Font" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [58739 59602])
+                    ("fixIfBroken" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [59605 59862])
+                    ("sanitize" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [59865 59967])
+                    ("notifyCursorLeavesOrEnters" function
+                       (:arguments 
+                          ( ("old" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Cursor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [60002 60021])
+                            ("cur" variable
+                               (:reference 1
+                                :type ("Cursor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [60022 60035]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [59970 60969])
+                    ("setCurrentFont" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [60972 62280])
+                    ("textUndo" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [62283 62393])
+                    ("textRedo" function
+                       (:parent "Cursor"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [62396 62506])
+                    ("finishUndo" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [62509 62576])
+                    ("beginUndoGroup" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [62579 62654])
+                    ("endUndoGroup" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [62657 62733])
+                    ("recordUndo" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("kind" variable (:type ("UndoKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62760 62774])
+                            ("from" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62775 62789])
+                            ("to" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62790 62802]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [62736 62865])
+                    ("recordUndo" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("kind" variable (:type ("UndoKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62892 62906])
+                            ("from" variable (:type ("pit_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62907 62921]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [62868 62980])
+                    ("recordUndo" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("kind" variable (:type ("UndoKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [63007 63021]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [62983 63074])
+                    ("recordUndoInset" function
+                       (:parent "Cursor"
+                        :arguments 
+                          ( ("kind" variable (:type ("UndoKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [63106 63120])
+                            ("inset" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Inset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [63121 63141]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [63077 63206])
+                    ("recordUndoFullDocument" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [63209 63305])
+                    ("recordUndoSelection" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [63308 63559])
+                    ("checkBufferStructure" function
+                       (:parent "Cursor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [63562 63899]))                  
+                :type "namespace")
+                nil [37331 63903]))          
+    :file "Cursor.cpp"
+    :pointmax 63921
+    :fsize 63922
+    :lastmodtime '(21132 23072 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!Dropbox-personal!Dropbox!math!lyx_minimal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

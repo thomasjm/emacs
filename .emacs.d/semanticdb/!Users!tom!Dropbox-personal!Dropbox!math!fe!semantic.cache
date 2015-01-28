@@ -1,0 +1,250 @@
+;; Object fe/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "fe/"
+  :tables (list 
+   (semanticdb-table "fe (tom-asus's conflicted copy 2014-03-12).htm"
+    :major-mode 'html-mode
+    :tags 
+        '( ("var c = document.getElementById(\"myCanvas\");
+	  var context = c.getContext(\"2d\");
+
+	  var f = math.frac.fracFactory();
+	  f.draw( util.getTranslatedContext(context, c, 10, 10) );
+
+	  var f2 = math.frac.fracFactory();
+	  f2.draw( util.getTranslatedContext(context, c, 50, 10) );
+
+	  var test = new CanvasText( c, {
+	  x: 0,
+	  y: 0,
+	  width: 50,
+	  height: 50,
+	  context: util.getTranslatedContext(context, c, 150, 100),
+	  placeholder: 'Enter your username...'
+	  } );" section nil nil [10 111])
+            ("var c = document.getElementById(\"myCanvas\");
+	  var context = c.getContext(\"2d\");
+
+	  var f = math.frac.fracFactory();
+	  f.draw( util.getTranslatedContext(context, c, 10, 10) );
+
+	  var f2 = math.frac.fracFactory();
+	  f2.draw( util.getTranslatedContext(context, c, 50, 10) );
+
+	  var test = new CanvasText( c, {
+	  x: 0,
+	  y: 0,
+	  width: 50,
+	  height: 50,
+	  context: util.getTranslatedContext(context, c, 150, 100),
+	  placeholder: 'Enter your username...'
+	  } );" section nil nil [111 196])
+            ("var c = document.getElementById(\"myCanvas\");
+	  var context = c.getContext(\"2d\");
+
+	  var f = math.frac.fracFactory();
+	  f.draw( util.getTranslatedContext(context, c, 10, 10) );
+
+	  var f2 = math.frac.fracFactory();
+	  f2.draw( util.getTranslatedContext(context, c, 50, 10) );
+
+	  var test = new CanvasText( c, {
+	  x: 0,
+	  y: 0,
+	  width: 50,
+	  height: 50,
+	  context: util.getTranslatedContext(context, c, 150, 100),
+	  placeholder: 'Enter your username...'
+	  } );" section nil nil [196 240])
+            ("var c = document.getElementById(\"myCanvas\");
+	  var context = c.getContext(\"2d\");
+
+	  var f = math.frac.fracFactory();
+	  f.draw( util.getTranslatedContext(context, c, 10, 10) );
+
+	  var f2 = math.frac.fracFactory();
+	  f2.draw( util.getTranslatedContext(context, c, 50, 10) );
+
+	  var test = new CanvasText( c, {
+	  x: 0,
+	  y: 0,
+	  width: 50,
+	  height: 50,
+	  context: util.getTranslatedContext(context, c, 150, 100),
+	  placeholder: 'Enter your username...'
+	  } );" section nil nil [240 281])
+            ("var c = document.getElementById(\"myCanvas\");
+	  var context = c.getContext(\"2d\");
+
+	  var f = math.frac.fracFactory();
+	  f.draw( util.getTranslatedContext(context, c, 10, 10) );
+
+	  var f2 = math.frac.fracFactory();
+	  f2.draw( util.getTranslatedContext(context, c, 50, 10) );
+
+	  var test = new CanvasText( c, {
+	  x: 0,
+	  y: 0,
+	  width: 50,
+	  height: 50,
+	  context: util.getTranslatedContext(context, c, 150, 100),
+	  placeholder: 'Enter your username...'
+	  } );" section nil nil [281 325])
+            ("var c = document.getElementById(\"myCanvas\");
+	  var context = c.getContext(\"2d\");
+
+	  var f = math.frac.fracFactory();
+	  f.draw( util.getTranslatedContext(context, c, 10, 10) );
+
+	  var f2 = math.frac.fracFactory();
+	  f2.draw( util.getTranslatedContext(context, c, 50, 10) );
+
+	  var test = new CanvasText( c, {
+	  x: 0,
+	  y: 0,
+	  width: 50,
+	  height: 50,
+	  context: util.getTranslatedContext(context, c, 150, 100),
+	  placeholder: 'Enter your username...'
+	  } );" section nil nil [325 843]))          
+    :file "fe (tom-asus's conflicted copy 2014-03-12).htm"
+    :pointmax 843
+    :fsize 842
+    :lastmodtime '(21204 60748 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "fe.htm"
+    :major-mode 'html-mode
+    :tags 
+        '( ("-->
+
+	<script type=\"text/javascript\" src=\"libs/CanvasInput/CanvasInput.js\">" section nil nil [10 116])
+            ("-->
+
+	<script type=\"text/javascript\" src=\"libs/CanvasInput/CanvasInput.js\">" section nil nil [116 206])
+            ("var fe = fe || {};
+        fe.c = document.getElementById(\"myCanvas\");
+
+	    var context = fe.c.getContext(\"2d\");
+
+	    <!-- var f = math.frac.fracFactory(); -->
+	    <!-- f.draw( util.getTranslatedContext(context, fe.c, 10, 10) ); -->
+
+	    <!-- var f2 = math.frac.fracFactory(); -->
+	    <!-- f2.draw( util.getTranslatedContext(context, fe.c, 50, 10) ); -->
+
+	    var empty = math.empty.emptyFactory();
+	    empty.draw( util.getTranslatedContext(context, fe.c, 100, 100) );
+
+
+	  <!-- var test = new CanvasText( c, { -->
+	  <!-- x: 0, -->
+	  <!-- y: 0, -->
+	  <!-- width: 50, -->
+	  <!-- height: 50, -->
+	  <!-- context: util.getTranslatedContext(context, c, 150, 100), -->
+	  <!-- placeholder: 'Enter your username...' -->
+	  <!-- } ); -->" section nil nil [206 287])
+            ("var fe = fe || {};
+        fe.c = document.getElementById(\"myCanvas\");
+
+	    var context = fe.c.getContext(\"2d\");
+
+	    <!-- var f = math.frac.fracFactory(); -->
+	    <!-- f.draw( util.getTranslatedContext(context, fe.c, 10, 10) ); -->
+
+	    <!-- var f2 = math.frac.fracFactory(); -->
+	    <!-- f2.draw( util.getTranslatedContext(context, fe.c, 50, 10) ); -->
+
+	    var empty = math.empty.emptyFactory();
+	    empty.draw( util.getTranslatedContext(context, fe.c, 100, 100) );
+
+
+	  <!-- var test = new CanvasText( c, { -->
+	  <!-- x: 0, -->
+	  <!-- y: 0, -->
+	  <!-- width: 50, -->
+	  <!-- height: 50, -->
+	  <!-- context: util.getTranslatedContext(context, c, 150, 100), -->
+	  <!-- placeholder: 'Enter your username...' -->
+	  <!-- } ); -->" section nil nil [287 323])
+            ("var fe = fe || {};
+        fe.c = document.getElementById(\"myCanvas\");
+
+	    var context = fe.c.getContext(\"2d\");
+
+	    <!-- var f = math.frac.fracFactory(); -->
+	    <!-- f.draw( util.getTranslatedContext(context, fe.c, 10, 10) ); -->
+
+	    <!-- var f2 = math.frac.fracFactory(); -->
+	    <!-- f2.draw( util.getTranslatedContext(context, fe.c, 50, 10) ); -->
+
+	    var empty = math.empty.emptyFactory();
+	    empty.draw( util.getTranslatedContext(context, fe.c, 100, 100) );
+
+
+	  <!-- var test = new CanvasText( c, { -->
+	  <!-- x: 0, -->
+	  <!-- y: 0, -->
+	  <!-- width: 50, -->
+	  <!-- height: 50, -->
+	  <!-- context: util.getTranslatedContext(context, c, 150, 100), -->
+	  <!-- placeholder: 'Enter your username...' -->
+	  <!-- } ); -->" section nil nil [323 364])
+            ("var fe = fe || {};
+        fe.c = document.getElementById(\"myCanvas\");
+
+	    var context = fe.c.getContext(\"2d\");
+
+	    <!-- var f = math.frac.fracFactory(); -->
+	    <!-- f.draw( util.getTranslatedContext(context, fe.c, 10, 10) ); -->
+
+	    <!-- var f2 = math.frac.fracFactory(); -->
+	    <!-- f2.draw( util.getTranslatedContext(context, fe.c, 50, 10) ); -->
+
+	    var empty = math.empty.emptyFactory();
+	    empty.draw( util.getTranslatedContext(context, fe.c, 100, 100) );
+
+
+	  <!-- var test = new CanvasText( c, { -->
+	  <!-- x: 0, -->
+	  <!-- y: 0, -->
+	  <!-- width: 50, -->
+	  <!-- height: 50, -->
+	  <!-- context: util.getTranslatedContext(context, c, 150, 100), -->
+	  <!-- placeholder: 'Enter your username...' -->
+	  <!-- } ); -->" section nil nil [364 407])
+            ("var fe = fe || {};
+        fe.c = document.getElementById(\"myCanvas\");
+
+	    var context = fe.c.getContext(\"2d\");
+
+	    <!-- var f = math.frac.fracFactory(); -->
+	    <!-- f.draw( util.getTranslatedContext(context, fe.c, 10, 10) ); -->
+
+	    <!-- var f2 = math.frac.fracFactory(); -->
+	    <!-- f2.draw( util.getTranslatedContext(context, fe.c, 50, 10) ); -->
+
+	    var empty = math.empty.emptyFactory();
+	    empty.draw( util.getTranslatedContext(context, fe.c, 100, 100) );
+
+
+	  <!-- var test = new CanvasText( c, { -->
+	  <!-- x: 0, -->
+	  <!-- y: 0, -->
+	  <!-- width: 50, -->
+	  <!-- height: 50, -->
+	  <!-- context: util.getTranslatedContext(context, c, 150, 100), -->
+	  <!-- placeholder: 'Enter your username...' -->
+	  <!-- } ); -->" section nil nil [407 1201]))          
+    :file "fe.htm"
+    :pointmax 1201
+    :fsize 1200
+    :lastmodtime '(21293 63662 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!tom!Dropbox-personal!Dropbox!math!fe!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
