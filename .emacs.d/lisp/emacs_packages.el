@@ -25,13 +25,27 @@
 (add-hook 'javascript-mode-hook
 		  (lambda () (flymake-mode t)))
 
+;; JS
+(setq auto-mode-alist
+      (append
+       ;; File name (within directory) starts with a dot.
+       '(
+		 ("\\.js\\'" . js2-mode)
+		 )
+       auto-mode-alist))
+
+;; Dockblockr style comments for Javascript
+(require 'js-doc)
+(global-set-key (kbd "C-5") 'js-doc-insert-function-doc)
+
+;; node
+(setq inferior-js-program-command "node --interactive")
+
+
 ;; Dash
 (add-to-list 'load-path "~/.emacs.d/dash-at-point")
 (autoload 'dash-at-point "dash-at-point"
   "Search the word at point with Dash." t nil)
-
-;; ;; Hipchat
-;; (load "hipchat.el")
 
 ;; Emacs-eclim
 ;; (add-to-list 'load-path "~/.emacs.d/emacs-eclim")
@@ -76,6 +90,7 @@
 (add-hook 'clojure-mode-hook
           (lambda () (local-set-key (kbd "C-;") 'compile-site)))
 
+;; Thing at point
 (require 'thingatpt)
 (define-key isearch-mode-map (kbd "C-*")
   (lambda ()
@@ -119,10 +134,6 @@
 ;; regular auto-complete initialization
 (require 'auto-complete-config)
 (ac-config-default)
-
-;; Dockblockr style comments for Javascript
-(require 'js-doc)
-(global-set-key (kbd "C-5") 'js-doc-insert-function-doc)
 
 ;; Semantic stuff
 (add-to-list 'semantic-default-submodes
@@ -197,10 +208,14 @@
 (autoload 'eimp-mode "eimp" "Emacs Image Manipulation Package." t)
 (add-hook 'image-mode-hook 'eimp-mode)
 
-;; flymake-hlint
-;; (eval-after-load 'haskell
-;;   (flymake-hlint-load))
-;; (add-hook 'haskell-mode-hook 'flymake-hlint-load)
+;; Org mode setup
+(setq org-todo-keywords '((sequence "TODO" "IN PROGRESS" "IN REVIEW" "BLOCKED" "|" "WONTDO" "DONE")))
+;; MobileOrg setup
+(setq org-directory "~/Dropbox/todo")
+(setq org-mobile-inbox-for-pull "~/Dropbox/todo/flagged.org") ;; New notes
+(setq org-mobile-directory "~/Dropbox/MobileOrg")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+
 
 ;; Clean modeline
 (load "clean-modeline")
@@ -216,12 +231,14 @@
 (toggle-diredp-find-file-reuse-dir 1)
 
 ;;; Haskell setup
+(add-hook 'haskell-mode-hook 'global-flycheck-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
 (eval-after-load 'flycheck
   '(require 'flycheck-ghcmod))
 ;; (eval-after-load 'flycheck
-;;   '(require 'flycheck-hdevtools))
+;;   '(require 'flycheck-hdevtools)) ;; hdevtools is poorly maintained/doesn't understand Cabal sandboxes
 ;; ghc-mod
 (setq haskell-program-name "cabal repl") ;; important
 (add-to-list 'load-path "~/.emacs.d/ghc-mod")
@@ -286,6 +303,9 @@
                                (cljr-add-keybindings-with-prefix "C-c C-j")
                                ))
 
+;; downcase-region (TODO why did I do this)
+(put 'downcase-region 'disabled nil)
+
 ;; Chinese stuff
 (load "toggle-case.el")
 (autoload 'pinyin-mode "pinyin-mode.el" "Pinyin mode" t)
@@ -306,8 +326,5 @@
 
 ;; toggle-transparency
 (load "toggle-transparency")
-
-;; Hipchat config
-(load "hipchat_config.el")
 
 ;; (benchmark-init/deactivate)
