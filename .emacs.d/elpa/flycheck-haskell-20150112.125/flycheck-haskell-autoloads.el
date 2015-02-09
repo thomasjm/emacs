@@ -1,10 +1,10 @@
 ;;; flycheck-haskell-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (flycheck-haskell-setup) "flycheck-haskell" "flycheck-haskell.el"
-;;;;;;  (21649 59314 0 0))
+;;;### (autoloads nil "flycheck-haskell" "flycheck-haskell.el" (21720
+;;;;;;  24945 0 0))
 ;;; Generated autoloads from flycheck-haskell.el
 
 (autoload 'flycheck-haskell-setup "flycheck-haskell" "\
@@ -21,16 +21,14 @@ path as well.
 
 ;;;***
 
-;;;### (autoloads nil nil ("flycheck-haskell-pkg.el") (21649 59314
-;;;;;;  991947 0))
+;;;### (autoloads nil nil ("flycheck-haskell-pkg.el") (21720 24945
+;;;;;;  574460 0))
 
 ;;;***
 
-(provide 'flycheck-haskell-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; flycheck-haskell-autoloads.el ends here

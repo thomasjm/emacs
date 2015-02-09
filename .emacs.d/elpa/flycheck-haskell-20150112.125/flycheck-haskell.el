@@ -1,6 +1,6 @@
 ;;; flycheck-haskell.el --- Flycheck: Cabal projects and sandboxes -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2014 Sebastian Wiesner <swiesner@lunaryorn.com>
+;; Copyright (C) 2014, 2015 Sebastian Wiesner <swiesner@lunaryorn.com>
 ;; Copyright (C) 2014 Gracjan Polak <gracjanpolak@gmail.com>
 
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
@@ -186,7 +186,7 @@ string, or nil, if no sandbox configuration file was found."
 (defun flycheck-haskell-configure ()
   "Set paths and package database for the current project."
   (interactive)
-  (when (buffer-file-name)
+  (when (and (buffer-file-name) (file-directory-p default-directory))
     (-when-let* ((cabal-file (haskell-cabal-find-file))
                  (config (flycheck-haskell-get-configuration cabal-file)))
       (flycheck-haskell-process-configuration config))

@@ -20,6 +20,15 @@
    hipchat-nickname
    t))
 
+(defun hipchat-go ()
+  (interactive)
+  (load "~/.emacs_hipchat_pw")
+  (message "Got password: ")
+  (message hipchat-pw)
+  (jabber-connect "26619_858606" "chat.hipchat.com" "" nil hipchat-pw)
+  ;; (hipchat-join "team-apx")
+  )
+
 ;; Mention nicknames in a way that HipChat clients will pickup
 (defun hipchat-mention (nickname)
   (interactive
