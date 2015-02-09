@@ -3,3 +3,4 @@
 *.elc
 .session
 auto-save-list
+ac-comphist.dat

@@ -232,7 +232,7 @@
 
 ;;; Haskell setup
 (add-hook 'haskell-mode-hook 'global-flycheck-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
 (eval-after-load 'flycheck
@@ -284,11 +284,14 @@
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+;; smartparens (way better than paredit)
+(load "my-smartparens-config")
+
 ;; CIDER
 (setq cider-auto-select-error-buffer nil)
 (setq nrepl-error-buffer-select nil)
 (add-hook 'clojure-mode-hook (lambda ()
-                               (load "my-smartparens-config")
+                               ;; (load "my-smartparens-config")
                                ;; (define-key cider-mode-map (kbd "<M-up>") 'sp-splice-sexp-killing-backward)
                                (define-key cider-mode-map "\C-c\C-k" 'cider-load-file)
                                (define-key cider-mode-map "\C-c\C-l" 'cider-load-buffer)))
@@ -320,6 +323,11 @@
                                   (require 'psci)
                                   (add-to-list 'rtog/mode-repl-alist '(purescript-mode . psci))
                                   (inferior-psci-mode)))
+
+;; livedown
+(add-hook 'markdown-mode-hook (lambda ()
+                                (message "Running markdown mode hook!")
+                                (require 'livedown)))
 
 ;; git-gutter
 (global-git-gutter-mode)

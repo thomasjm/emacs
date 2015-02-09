@@ -32,10 +32,13 @@
 ;;; Load path stuff
 (add-to-list 'load-path "~/.emacs.d/lisp") ;; configs and elisp packages I've written
 (add-to-list 'load-path "~/.emacs.d/singletons") ;; Emacs packages that were downloaded separately and come as single files
+
 ;; Misc functions
 (load "misc-functions.el")
+
 ;; Keybindings
 (load "keybindings.el")
+
 ;; Platform-specific stuff
 (when (equal system-type 'gnu/linux)
   (load "linux-config.el"))
@@ -48,9 +51,6 @@
 ;; Never use tabs
 (load "never-use-tabs.el")
 
-;; Theming
-;; '(custom-enabled-themes (quote (wombat)))
-
 ;; delete-trailing-whitespace before every save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -59,10 +59,14 @@
   (push-mark))
 
 ;; Load packages
-(add-hook 'after-init-hook (lambda () (load "emacs_packages.el")))
+(add-hook 'after-init-hook (lambda ()
+                             (load "emacs_packages.el")
+
+                             ;; Apply theme
+                             (load-theme 'afternoon t)))
 
 ;; Custom custom file
-(setq custom-file "~/.emacs.d/emacs-custom.el")
+(setq custom-file "~/.emacs.d/lisp/emacs_custom.el")
 (load custom-file)
 
 ;; (benchmark-init/deactivate) ;; Uncomment to benchmark Emacs initialization
