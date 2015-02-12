@@ -335,4 +335,29 @@
 ;; toggle-transparency
 (load "toggle-transparency")
 
+;; ido-mode
+;; ido-mode integrates well with Projectile
+(ido-mode t)
+;; Push mark when using ido-imenu
+(defadvice ido-imenu (before push-mark activate)
+  (push-mark))
+
+;; helm
+(require 'helm-config)
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
+;; Enable useful helm commands
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-c o") 'helm-occur)
+(global-set-key (kbd "C-c h t") 'helm-top)
+;; helm-projectile
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
+(helm-autoresize-mode t)
+(helm-mode 1)
+
+
 ;; (benchmark-init/deactivate)

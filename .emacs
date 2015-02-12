@@ -23,8 +23,6 @@
   (scroll-bar-mode -1))
 ;; When you have a selected region and start typing, overwrite
 (delete-selection-mode 1)
-;; ido-mode integrates well with Projectile
-(ido-mode t)
 ;; ibuffer is awesome
 (defalias 'list-buffers 'ibuffer)
 (setq ibuffer-default-sorting-mode 'major-mode)
@@ -53,10 +51,6 @@
 
 ;; delete-trailing-whitespace before every save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-;; Push mark when using ido-imenu
-(defadvice ido-imenu (before push-mark activate)
-  (push-mark))
 
 ;; Load packages
 (add-hook 'after-init-hook (lambda ()
