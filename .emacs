@@ -63,6 +63,9 @@
 (setq custom-file "~/.emacs.d/lisp/emacs_custom.el")
 (load custom-file)
 
+(global-set-key (kbd "M-h") '(lambda () nil))
+(global-set-key [(super h)] '(lambda () nil))
+
 ;; (benchmark-init/deactivate) ;; Uncomment to benchmark Emacs initialization
 
 ;; Useful for debugging startup problems

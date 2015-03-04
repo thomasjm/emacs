@@ -13,17 +13,17 @@
 ;; Perspective
 (require 'perspective)
 (persp-mode)
-(require 'persp-projectile)
-(define-key projectile-mode-map (kbd "s-s") 'projectile-persp-switch-project) ;; TODO: move to keybindings file
+;; (require 'persp-projectile)
+;; (define-key projectile-mode-map (kbd "s-s") 'projectile-persp-switch-project) ;; TODO: move to keybindings file
 
 ;; Dirtree
 (autoload 'dirtree "dirtree" "Dirtree thing" t)
 
 ;; JS linter
 (add-to-list 'load-path "~/.emacs.d/jshint-mode")
-(require 'flymake-jshint)
-(add-hook 'javascript-mode-hook
-		  (lambda () (flymake-mode t)))
+;; (require 'flymake-jshint)
+;; (add-hook 'javascript-mode-hook
+;; 		  (lambda () (flymake-mode t)))
 
 ;; JS
 (setq auto-mode-alist
@@ -57,7 +57,8 @@
 ;; (require 'multiple-cursors)
 
 ;; smex
-(smex-initialize)
+;; (smex-initialize) ;; disabled since we use helm now
+
 ;; (global-set-key [(meta x)] (lambda ()
 ;;                              (interactive)
 ;;                              (or (boundp 'smex-cache)
@@ -131,9 +132,21 @@
 ;; (require 'impatient-mode)
 ;; (load "impatient-mode-stuff")
 
-;; regular auto-complete initialization
-(require 'auto-complete-config)
-(ac-config-default)
+;; auto-complete
+;; (require 'auto-complete-config)
+;; (ac-config-default)
+;; company-mode
+(global-company-mode)
+;; (add-to-list 'company-backends 'company-ghc)
+(add-to-list 'company-backends '(company-ghc :with company-dabbrev-code))
+(require 'color)
+(let ((bg (face-attribute 'default :background)))
+  (custom-set-faces
+   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 10)))))
+   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
 
 ;; Semantic stuff
 (add-to-list 'semantic-default-submodes
@@ -255,12 +268,34 @@
 (eval-after-load 'haskell-mode '(progn
   (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
   (define-key haskell-mode-map (kbd "C-c C-z") 'haskell-interactive-bring)
+  (define-key haskell-mode-map (kbd "C-c <f17>") 'haskell-interactive-bring) ;; Used for keyremappings on Cocoa emacs
   (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
   (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
   (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
   (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
   (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
   (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-jump-to-def-or-tag)
+
+  (define-key haskell-mode-map (kbd "C-x C-s")
+    (lambda ()
+      (interactive)
+      (save-excursion
+        (beginning-of-buffer)
+        ;; Sort the initial import block
+        (when (search-forward "import" nil t)
+          (beginning-of-line)
+          (haskell-sort-imports)
+          )
+
+        ;; Sort any following import blocks
+        (while (search-forward "
+
+import" nil t)
+          (beginning-of-line)
+          (haskell-sort-imports)
+          ))
+
+      (save-buffer)))
   ))
 (eval-after-load 'haskell-cabal '(progn
   (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
@@ -293,6 +328,7 @@
 (add-hook 'clojure-mode-hook (lambda ()
                                ;; (load "my-smartparens-config")
                                ;; (define-key cider-mode-map (kbd "<M-up>") 'sp-splice-sexp-killing-backward)
+                               (define-key cider-mode-map (kbd "C-c <f17>") 'cider-switch-to-repl-buffer) ;; Used for keyremappings on Cocoa emacs
                                (define-key cider-mode-map "\C-c\C-k" 'cider-load-file)
                                (define-key cider-mode-map "\C-c\C-l" 'cider-load-buffer)))
 
@@ -343,9 +379,16 @@
   (push-mark))
 
 ;; helm
+(defun projectile-helm-ag-at-point (arg)
+  (interactive "P")
+  (if arg
+      (setq helm-ag-insert-at-point 'symbol)
+    (setq helm-ag-insert-at-point nil))
+  (helm-ag (projectile-project-root)))
 (require 'helm-config)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
+(setq helm-split-window-in-side-p t)
 ;; Enable useful helm commands
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-mini)
@@ -353,11 +396,42 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c o") 'helm-occur)
 (global-set-key (kbd "C-c h t") 'helm-top)
+(global-set-key (kbd "C-c a") 'projectile-helm-ag-at-point)
 ;; helm-projectile
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
-(helm-autoresize-mode t)
-(helm-mode 1)
+(defun projectile-persp-switch-project (project-to-switch)
+  (interactive (list (projectile-completing-read "Switch to project: "
+                                                 (projectile-relevant-known-projects))))
+  (let* ((name (file-name-nondirectory (directory-file-name project-to-switch)))
+         (persp (gethash name perspectives-hash)))
+    (when (not (equal persp persp-curr))
+      (persp-switch name))
+    (projectile-switch-project-by-name project-to-switch)))
+(global-set-key (kbd "C-c p q") 'projectile-persp-switch-project)
 
+(defadvice projectile-switch-project (before projectile-create-perspective-after-switching-projects activate)
+  "Create a dedicated perspective for current project's window after switching projects."
+  (message "ADVICE CALLED")
+  (let ((project-name (projectile-project-name)))
+    (persp-switch project-name)))
+(define-key helm-map [remap helm-projectile-switch-project] 'projectile-persp-switch-project)
+
+;; helm-ag
+(defun projectile-helm-ag ()
+  (interactive)
+  (helm-do-ag (projectile-project-root)))
+
+;; Turn on helm
+(helm-mode 1)
+(helm-autoresize-mode t)
+
+
+;; rest client
+(add-to-list 'auto-mode-alist '("\\.rest\\'" . restclient-mode))
+
+;; Objective C
+(add-to-list 'auto-mode-alist '("\\.mm\\'" . objc-mode))
+(add-to-list 'auto-mode-alist '("\\.m\\'" . objc-mode))
 
 ;; (benchmark-init/deactivate)

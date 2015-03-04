@@ -3,6 +3,7 @@
 (global-set-key (kbd "M-?") 'mark-paragraph)
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
+(global-set-key (kbd "<f18>") 'backward-kill-word) ;; Used with special Karabiner remapping for M-h on Cocoa emacs on OS X. Otherwise M-h hides the window.
 
 ;;; Other keybindings
 (global-set-key (kbd "C-M-r") 'revert-buffer)
@@ -111,10 +112,14 @@
 (global-set-key (kbd "C-M-c") 'toggle-case)
 
 ;; Grep
-(global-set-key (kbd "C-x C-r") 'rgrep)
+(global-set-key (kbd "C-x C-r") 'projectile-helm-ag)
 
 ;; Toggle transparency
 (global-set-key (kbd "C-c t") 'toggle-transparency)
+
+;; Toggle transparency
+(global-set-key (kbd "C-M-s") 'persp-switch)
+
 
 ;; lisp
 (define-key lisp-mode-map (kbd "C-c C-l") 'eval-buffer)

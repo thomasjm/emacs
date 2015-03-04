@@ -404,25 +404,47 @@ for various things, but is optional."
                      (cl-cadddr state)
                      (cl-cadddr (cdr state)))))))))
 
+(defun get-string-from-file (filePath)
+  "Return filePath's file content."
+  (with-temp-buffer
+    (insert-file-contents filePath)
+    (buffer-string)))
+
 ;;;###autoload
 (defun haskell-process-minimal-imports ()
   "Dump minimal imports."
   (interactive)
-  (unless (> (save-excursion
-               (goto-char (point-min))
-               (haskell-navigate-imports-go)
-               (point))
-             (point))
-    (goto-char (point-min))
-    (haskell-navigate-imports-go))
+  ;; (unless (> (save-excursion
+  ;;              (goto-char (point-min))
+  ;;              (haskell-navigate-imports-go)
+  ;;              (point))
+  ;;            (point))
+  ;;   (goto-char (point-min))
+  ;;   (haskell-navigate-imports-go))
   (haskell-process-queue-sync-request (haskell-process)
                                       ":set -ddump-minimal-imports")
   (haskell-process-load-file)
-  (insert-file-contents-literally
-   (concat (haskell-session-current-dir (haskell-session))
-           "/"
-           (haskell-guess-module-name)
-           ".imports")))
+
+  (let* ((name (haskell-session-name (haskell-session)))
+         (filename (concat (haskell-session-current-dir (haskell-session))
+                           "/dist/build/"
+                           name
+                           "/"
+                           name
+                           "-tmp/"
+                           (haskell-guess-module-name)
+                           ".imports"))
+         (contents (get-string-from-file filename))
+         (current-import (buffer-substring (line-beginning-position) (line-end-position)))
+         )
+
+    (message contents)
+    (message "Here's the current import: " )
+    (message current-import)
+    )
+
+  ;; (insert-file-contents-literally)
+  )
 
 (defun haskell-interactive-jump-to-error-line ()
   "Jump to the error line."

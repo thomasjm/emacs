@@ -191,6 +191,15 @@
   (dired (cond ((equal system-type 'gnu/linux) "~/Dropbox")
 			   ((equal system-type 'darwin) "~/Dropbox-personal/Dropbox"))))
 
+;; Open special emacs config files
+(defun open-keybindings ()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/keybindings.el"))
+(defun open-emacs-packages ()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/emacs_packages.el"))
+
+
 ;; Open the todo.org file
 (defun open-todo ()
   (interactive)

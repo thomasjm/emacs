@@ -14,6 +14,8 @@
    (quote
     ("~/.cabal/bin" "/Users/tomm/path" "/usr/bin" "/bin" "/usr/sbin" "/sbin" "/Applications/Emacs.app/Contents/MacOS/libexec" "/Applications/Emacs.app/Contents/MacOS/bin" "/usr/local/bin" "/usr/local/Cellar/ghc/7.6.3/bin/" "/usr/local/Cellar/imagemagick/6.8.9-1/bin" "/Users/tomm/Library/Haskell/bin/" "/Users/tomm/ihaskell/.cabal-sandbox/bin" "/Users/tomm/.cabal/bin/" "/Applications/ghc-7.8.3.app/Contents/bin/")))
  '(fci-rule-color "#073642")
+ '(haskell-ask-also-kill-buffers nil)
+ '(haskell-interactive-mode-eval-pretty t)
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
  '(haskell-process-suggest-remove-import-lines t)
@@ -31,6 +33,7 @@
      ("#93115C" . 85)
      ("#073642" . 100))))
  '(inhibit-startup-screen t)
+ '(js-indent-level 2)
  '(markdown-command
    "pandoc -f markdown_github -c /Users/tomm/Dropbox/useful/markdown/kultiad.css")
  '(org-startup-truncated nil)
@@ -67,4 +70,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-scrollbar-bg ((t (:background "#ffffff"))))
+ '(company-scrollbar-fg ((t (:background "#ffffff"))))
+ '(company-tooltip ((t (:inherit default :background "#ffffff"))))
+ '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+ '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
  '(persp-selected-face ((t (:foreground "green4" :weight bold)))))
