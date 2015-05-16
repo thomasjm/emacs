@@ -3,9 +3,34 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-		))
+        backward-sexp
+        dabbrev-expand
+        delete-horizontal-space
+        downcase-region
+        elpy-nav-backward-indent
+        elpy-nav-forward-indent
+        forward-sexp
+        haskell-indentation-delete-backward-char
+        haskell-mode-contextual-space
+        helm-M-x
+        indent-for-tab-command
+        kill-sexp-if-paren
+        org-delete-char
+        org-self-insert-command
+        sp-backward-sexp
+        sp-copy-sexp
+        sp-forward-sexp
+        sp-forward-slurp-sexp
+        whole-line-or-region-kill-region
+        whole-line-or-region-yank
+        yas-expand
+        zap-up-to-char
+        ))
 
 (setq mc/cmds-to-run-once
       '(
-		beginning-of-buffer
-		))
+        beginning-of-buffer
+        coffee-dedent-line-backspace
+        helm-confirm-and-exit-minibuffer
+        helm-find-files
+        ))

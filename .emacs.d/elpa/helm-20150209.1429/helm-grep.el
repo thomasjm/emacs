@@ -984,7 +984,7 @@ in recurse, search being made on `helm-zgrep-file-extension-regexp'."
                             (> (- (setq end (match-end 0))
                                   (setq beg (match-beginning 0))) 0))
                   (add-text-properties beg end '(face helm-grep-match)))
-                do (goto-char (point-min))) 
+                do (goto-char (point-min)))
           (buffer-string))
       (error nil))))
 

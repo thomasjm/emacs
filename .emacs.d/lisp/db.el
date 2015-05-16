@@ -1,16 +1,21 @@
-(when (load "flymake" t)
- (defun flymake-pyflakes-init ()
-   (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                      'flymake-create-temp-inplace))
-          (local-file (file-relative-name
-                       temp-file
-                       (file-name-directory buffer-file-name))))
-     (list "/Users/tomm/path/pyxl_pyflakes" (list local-file))))
+;; (when (load "flymake" t)
+;;  (defun flymake-pyflakes-init ()
+;;    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+;;                       'flymake-create-temp-inplace))
+;;           (local-file (file-relative-name
+;;                        temp-file
+;;                        (file-name-directory buffer-file-name))))
+;;      (list "/Users/tomm/path/pyxl_pyflakes" (list local-file))))
 
- (add-to-list 'flymake-allowed-file-name-masks
-              '("\\.py\\'" flymake-pyflakes-init)))
+;;  (add-to-list 'flymake-allowed-file-name-masks
+;;               '("\\.py\\'" flymake-pyflakes-init)))
 
-(add-hook 'python-mode-hook 'flymake-find-file-hook)
+;; (add-hook 'python-mode-hook 'flymake-find-file-hook)
+
+;; TODO: this should make elpy use flycheck instead of flymake
+;; (when (require 'flycheck nil t)
+;;   (setq elpy-default-minor-modes (delete 'flymake-mode elpy-default-minor-modes))
+;;   (add-to-list 'elpy-default-minor-modes 'flycheck-mode))
 
 ;; Autosave to temp folder
 (setq backup-directory-alist

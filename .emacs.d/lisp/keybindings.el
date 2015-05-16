@@ -124,3 +124,9 @@
 ;; lisp
 (define-key lisp-mode-map (kbd "C-c C-l") 'eval-buffer)
 (define-key emacs-lisp-mode-map (kbd "C-c C-l") 'eval-buffer)
+
+;; Projectile find files (common hotkey)
+(global-set-key (kbd "C-t") 'projectile-find-file)
+
+;; align-regexp
+(global-set-key (kbd "C-x a r") 'align-regexp)

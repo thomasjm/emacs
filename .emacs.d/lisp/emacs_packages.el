@@ -21,9 +21,10 @@
 
 ;; JS linter
 (add-to-list 'load-path "~/.emacs.d/jshint-mode")
-;; (require 'flymake-jshint)
-;; (add-hook 'javascript-mode-hook
-;; 		  (lambda () (flymake-mode t)))
+(add-hook 'javascript-mode-hook
+		  (lambda () (flycheck-mode t)))
+(add-hook 'js2-mode-hook
+		  (lambda () (flycheck-mode t)))
 
 ;; JS
 (setq auto-mode-alist
@@ -140,13 +141,14 @@
 ;; (add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends '(company-ghc :with company-dabbrev-code))
 (require 'color)
-(let ((bg (face-attribute 'default :background)))
-  (custom-set-faces
-   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
-   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 10)))))
-   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
+;; (let ((bg (face-attribute 'default :background)))
+;;   (custom-set-faces
+;;    `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+;;    `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+;;    `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 10)))))
+;;    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+;;    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+;;    ))
 
 ;; Semantic stuff
 (add-to-list 'semantic-default-submodes
@@ -244,16 +246,14 @@
 (toggle-diredp-find-file-reuse-dir 1)
 
 ;;; Haskell setup
+(setq haskell-program-name "cabal repl") ;; important
 (add-hook 'haskell-mode-hook 'global-flycheck-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
 (eval-after-load 'flycheck
   '(require 'flycheck-ghcmod))
-;; (eval-after-load 'flycheck
-;;   '(require 'flycheck-hdevtools)) ;; hdevtools is poorly maintained/doesn't understand Cabal sandboxes
 ;; ghc-mod
-(setq haskell-program-name "cabal repl") ;; important
 (add-to-list 'load-path "~/.emacs.d/ghc-mod")
 
 ;; tags on save
@@ -394,9 +394,14 @@ import" nil t)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-c o") 'helm-occur)
+(global-set-key (kbd "C-c o") 'helm-swoop)
+;; (global-set-key (kbd "C-u C-c o") 'helm-multi-swoop)
 (global-set-key (kbd "C-c h t") 'helm-top)
 (global-set-key (kbd "C-c a") 'projectile-helm-ag-at-point)
+;; helm-swoop
+(setq helm-swoop-split-direction 'split-window-vertically)
+(setq helm-swoop-pre-input-function
+      (lambda () ""))
 ;; helm-projectile
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
@@ -418,14 +423,27 @@ import" nil t)
 (define-key helm-map [remap helm-projectile-switch-project] 'projectile-persp-switch-project)
 
 ;; helm-ag
-(defun projectile-helm-ag ()
+(defun projectile-helm-ag (arg)
+  (interactive "P")
+  (if arg
+      (progn
+        ;; Have to kill the prefix arg so it doesn't get forwarded
+        ;; and screw up helm-do-ag
+        (set-variable 'current-prefix-arg nil)
+        (helm-do-ag (file-name-directory (buffer-file-name)))
+        )
+    (helm-do-ag (projectile-project-root))
+    ))
+
+(defun projectile-helm-ag-in-folder ()
   (interactive)
   (helm-do-ag (projectile-project-root)))
+
 
 ;; Turn on helm
 (helm-mode 1)
 (helm-autoresize-mode t)
-
+(global-set-key (kbd "M-y") 'yank-pop)
 
 ;; rest client
 (add-to-list 'auto-mode-alist '("\\.rest\\'" . restclient-mode))
@@ -433,5 +451,14 @@ import" nil t)
 ;; Objective C
 (add-to-list 'auto-mode-alist '("\\.mm\\'" . objc-mode))
 (add-to-list 'auto-mode-alist '("\\.m\\'" . objc-mode))
+
+;; Highlight colors in CSS-like files
+(add-hook 'css-mode-hook 'xah-syntax-color-hex)
+(add-hook 'scss-mode-hook 'xah-syntax-color-hex)
+(add-hook 'less-mode-hook 'xah-syntax-color-hex)
+(add-hook 'html-mode-hook 'xah-syntax-color-hex)
+
+;; Coffeescript
+(custom-set-variables '(coffee-tab-width 2))
 
 ;; (benchmark-init/deactivate)

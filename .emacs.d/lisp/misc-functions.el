@@ -392,3 +392,40 @@ This command is similar to `find-file-at-point' but without prompting for confir
                  (t
                   (message "Symbol not bound: %S" symbol)))))
   (t (message "No symbol at point"))))
+
+
+;; From http://ergoemacs.org/emacs/emacs_CSS_colors.html
+(defun xah-syntax-color-hsl ()
+  "Syntax color hex color spec such as 「hsl(0,90%,41%)」 in current buffer."
+  (interactive)
+  (font-lock-add-keywords
+   nil
+   '(("hsl( *\\([0-9]\\{1,3\\}\\) *, *\\([0-9]\\{1,3\\}\\)% *, *\\([0-9]\\{1,3\\}\\)% *)"
+      (0 (put-text-property
+          (+ (match-beginning 0) 3)
+          (match-end 0)
+          'face (list :background
+                      (concat "#" (mapconcat 'identity
+                                             (mapcar
+                                              (lambda (x) (format "%02x" (round (* x 255))))
+                                              (color-hsl-to-rgb
+                                               (/ (string-to-number (match-string-no-properties 1)) 360.0)
+                                               (/ (string-to-number (match-string-no-properties 2)) 100.0)
+                                               (/ (string-to-number (match-string-no-properties 3)) 100.0)
+                                               ) )
+                                             "" )) ;  "#00aa00"
+                      ))))) )
+  (font-lock-fontify-buffer)
+  )
+(defun xah-syntax-color-hex ()
+  "Syntax color hex color spec such as 「#ff1100」 in current buffer."
+  (interactive)
+  (font-lock-add-keywords
+   nil
+   '(("#[abcdef[:digit:]]\\{6\\}"
+      (0 (put-text-property
+          (match-beginning 0)
+          (match-end 0)
+          'face (list :background (match-string-no-properties 0)))))))
+  (font-lock-fontify-buffer)
+  )
