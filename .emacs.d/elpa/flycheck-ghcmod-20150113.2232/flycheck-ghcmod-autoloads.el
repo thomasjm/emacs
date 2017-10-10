@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil nil ("flycheck-ghcmod.el") (21720 26287 645168
-;;;;;;  0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/flycheck-ghcmod-20150113.2232/flycheck-ghcmod-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/flycheck-ghcmod-20150113.2232/flycheck-ghcmod.el")
+;;;;;;  (22018 1357 68200 0))
 
 ;;;***
 

@@ -4,10 +4,10 @@
 
 ;; Author: Shen Chao <scturtle@gmail.com>
 ;; URL: https://github.com/scturtle/flycheck-ghcmod
+;; Package-Version: 20150113.2232
 ;; Keywords: convenience languages tools
 ;; Package-Requires: ((flycheck "0.21-cvs1") (dash "2.0"))
-;; Version: 20150113.2232
-;; X-Original-Version: DEV
+;; Version: DEV
 
 ;; This file is not part of GNU Emacs.
 

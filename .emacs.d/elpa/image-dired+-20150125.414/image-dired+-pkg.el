@@ -1,1 +1,0 @@
-(define-package "image-dired+" "20150125.414" "Image-dired extensions" '((cl-lib "0.3")) :url "https://github.com/mhayashi1120/Emacs-image-diredx/raw/master/image-dired+.el" :keywords '("extensions" "multimedia"))
