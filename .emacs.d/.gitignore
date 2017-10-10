@@ -2,3 +2,13 @@ session.*
 srecode-map.el
 tramp
 projectile.cache
+*.cache
+recentf*
+smex-items
+url/*
+image-dired
+ido*.last
+*conflicted copy*
+.sx
+server
+.python-environments

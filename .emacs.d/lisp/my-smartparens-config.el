@@ -77,7 +77,7 @@
       (sp-kill-sexp)
     (kill-word 1)))
 
-(define-key sp-keymap (kbd "M-d") 'kill-sexp-if-paren)
+;; (define-key sp-keymap (kbd "M-d") 'kill-sexp-if-paren)
 
 (defun reformat-sexp ()
   (interactive)

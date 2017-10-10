@@ -45,6 +45,11 @@
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
 
+(defun json-format ()
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)))
+
 (defun despacify ()
   (while (re-search-forward "[[:space:]]*" (region-end) t)
     (replace-match "" nil nil)))
@@ -191,20 +196,11 @@
   (dired (cond ((equal system-type 'gnu/linux) "~/Dropbox")
 			   ((equal system-type 'darwin) "~/Dropbox-personal/Dropbox"))))
 
-;; Open special emacs config files
-(defun open-keybindings ()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/keybindings.el"))
-(defun open-emacs-packages ()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/emacs_packages.el"))
-
-
 ;; Open the todo.org file
 (defun open-todo ()
   (interactive)
   (find-file (cond ((equal system-type 'gnu/linux) "~/Dropbox/todo/todo.org")
-				   ((equal system-type 'darwin) "~/Dropbox/todo/todo.org"))))
+				   ((equal system-type 'darwin) "~/Dropbox \(Personal\)/todo/todo.org"))))
 
 ;; Open the todo.org file
 (defun open-work-todo ()
@@ -355,89 +351,11 @@ This command is similar to `find-file-at-point' but without prompting for confir
   (find-file-other-window outfile)))
 
 
-(defun which-active-modes ()
-  "Give a message of which minor modes are enabled in the current buffer."
+(defun haskell-interactive-run-last ()
   (interactive)
-  (let ((active-modes))
-    (mapc (lambda (mode) (condition-case nil
-                             (if (and (symbolp mode) (symbol-value mode))
-                                 (add-to-list 'active-modes mode))
-                           (error nil) ))
-          minor-mode-list)
-    (message "Active modes are %s" active-modes)))
-
-
-(defun elisp-find-definition (name)
-  "Jump to the definition of the function (or variable) at point."
-  (interactive (list (thing-at-point 'symbol)))
-  (cond (name
-         (let ((symbol (intern-soft name))
-               (search (lambda (fun sym)
-                         (let* ((r (save-excursion (funcall fun sym)))
-                                (buffer (car r))
-                                (point (cdr r)))
-                           (cond ((not point)
-                                  (error "Found no definition for %s in %s"
-                                         name buffer))
-                                 (t
-                                  (switch-to-buffer buffer)
-                                  (goto-char point)
-                                  (recenter 1)))))))
-           (cond ((fboundp symbol)
-                  (elisp-push-point-marker)
-                  (funcall search 'find-function-noselect symbol))
-                 ((boundp symbol)
-                  (elisp-push-point-marker)
-                  (funcall search 'find-variable-noselect symbol))
-                 (t
-                  (message "Symbol not bound: %S" symbol)))))
-  (t (message "No symbol at point"))))
-
-
-;; From http://ergoemacs.org/emacs/emacs_CSS_colors.html
-(defun xah-syntax-color-hsl ()
-  "Syntax color hex color spec such as 「hsl(0,90%,41%)」 in current buffer."
-  (interactive)
-  (font-lock-add-keywords
-   nil
-   '(("hsl( *\\([0-9]\\{1,3\\}\\) *, *\\([0-9]\\{1,3\\}\\)% *, *\\([0-9]\\{1,3\\}\\)% *)"
-      (0 (put-text-property
-          (+ (match-beginning 0) 3)
-          (match-end 0)
-          'face (list :background
-                      (concat "#" (mapconcat 'identity
-                                             (mapcar
-                                              (lambda (x) (format "%02x" (round (* x 255))))
-                                              (color-hsl-to-rgb
-                                               (/ (string-to-number (match-string-no-properties 1)) 360.0)
-                                               (/ (string-to-number (match-string-no-properties 2)) 100.0)
-                                               (/ (string-to-number (match-string-no-properties 3)) 100.0)
-                                               ) )
-                                             "" )) ;  "#00aa00"
-                      ))))) )
-  (font-lock-fontify-buffer)
-  )
-(defun xah-syntax-color-hex ()
-  "Syntax color hex color spec such as 「#ff1100」 in current buffer."
-  (interactive)
-  (font-lock-add-keywords
-   nil
-   '(("#[abcdef[:digit:]]\\{6\\}"
-      (0 (put-text-property
-          (match-beginning 0)
-          (match-end 0)
-          'face (list :background (match-string-no-properties 0)))))))
-  (font-lock-fontify-buffer)
-  )
-
-
-
-(make-variable-buffer-local 'old-major-mode)
-
-(defun toggle-web-mode ()
-  (interactive)
-
-  (if (eq major-mode 'web-mode)
-      (normal-mode)
-    (web-mode))
-  )
+  (save-excursion
+    (haskell-interactive-switch)
+    (end-of-buffer)
+    (haskell-interactive-mode-history-previous 1)
+    (haskell-interactive-mode-return)
+    ))

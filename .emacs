@@ -11,7 +11,18 @@
 ;; Do this to prevent package-initialize from being called. Can speed up Emacs starting.
 ;; (setq package-enable-at-startup nil)
 
+
 ;;; General settings
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+
 (setq mac-option-modifier 'control)
 (setq mac-command-modifier 'meta)
 (when (fboundp 'tool-bar-mode)
@@ -23,6 +34,7 @@
   (scroll-bar-mode -1))
 ;; When you have a selected region and start typing, overwrite
 (delete-selection-mode 1)
+(setq dired-listing-switches "-alh")
 ;; ibuffer is awesome
 (defalias 'list-buffers 'ibuffer)
 (setq ibuffer-default-sorting-mode 'major-mode)
@@ -67,6 +79,18 @@
 (global-set-key [(super h)] '(lambda () nil))
 
 ;; (benchmark-init/deactivate) ;; Uncomment to benchmark Emacs initialization
+
+(setq projectile-enable-caching t)
+
+;; For some reason this key in keybindings.el is being overridden or something on Linux, so putting it here
+(global-set-key (kbd "M-h") 'backward-kill-word)
+
+(load "db.el")
+
+(setq tide-tsserver-process-environment '("TSS_LOG=-level verbose -file /tmp/tss.log"))
+
+; try to improve slow performance on windows.
+(setq w32-get-true-file-attributes nil)
 
 ;; Useful for debugging startup problems
 ;; (toggle-debug-on-error 1)

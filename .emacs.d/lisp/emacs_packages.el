@@ -225,6 +225,9 @@
 
 ;; Org mode setup
 (setq org-todo-keywords '((sequence "TODO" "IN PROGRESS" "IN REVIEW" "BLOCKED" "|" "WONTDO" "DONE")))
+(setq org-todo-keyword-faces
+      '(("TODO" . "yellow")
+        ("IN PROGRESS" . org-warning)))
 ;; MobileOrg setup
 (setq org-directory "~/Dropbox/todo")
 (setq org-mobile-inbox-for-pull "~/Dropbox/todo/flagged.org") ;; New notes
@@ -245,20 +248,45 @@
 ;; Options for Dired+
 (toggle-diredp-find-file-reuse-dir 1)
 
+;; Flycheck
+(require 'flycheck)
+(global-flycheck-mode t)
+
+
+;; (load "haskell_stack")
+
 ;;; Haskell setup
-(setq haskell-program-name "cabal repl") ;; important
-(add-hook 'haskell-mode-hook 'global-flycheck-mode)
+(setq haskell-program-name "stack ghci") ;; important
+;;(eval-after-load 'flycheck
+;;  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
+;; (eval-after-load 'flycheck
+  ;; '(require 'flycheck-ghcmod))
+
+;; (autoload 'ghc-init "ghc" nil t)
+;; (autoload 'ghc-debug "ghc" nil t)
+
+;; Haddock displays in w3m
+(require 'w3m-haddock)
+(add-hook 'w3m-display-hook 'w3m-haddock-display)
+
+(add-hook 'haskell-mode-hook (lambda ()
+                               ;; (flycheck-select-checker 'haskell-stack)
+                               (subword-mode)
+                               (interactive-haskell-mode)
+                               (intero-mode)
+                               ;; (intero-mode)
+                               ;; (ghc-init)
+                               ))
+
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
-(eval-after-load 'flycheck
-  '(require 'flycheck-ghcmod))
-;; ghc-mod
-(add-to-list 'load-path "~/.emacs.d/ghc-mod")
+
+;; (add-to-list 'load-path "~/.emacs.d/lisp/stack-mode")
+;; (require 'stack-mode)
+;; (add-hook 'haskell-mode-hook 'stack-mode)
 
 ;; tags on save
-(setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
-(add-to-list 'exec-path "~/.cabal/bin")
+;; (setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
+(add-to-list 'exec-path "~/.local/bin")
 (custom-set-variables '(haskell-tags-on-save t))
 ;; customization
 (custom-set-variables
@@ -266,14 +294,16 @@
   '(haskell-process-auto-import-loaded-modules t)
   '(haskell-process-log t))
 (eval-after-load 'haskell-mode '(progn
-  (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+  (define-key haskell-mode-map (kbd "C-c C-d") 'haskell-w3m-open-haddock)
+  (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-file)
+  (define-key haskell-mode-map (kbd "C-c m") 'haskell-interactive-run-last)
+  (define-key haskell-mode-map (kbd "C-c <return>") 'haskell-interactive-run-last)
   (define-key haskell-mode-map (kbd "C-c C-z") 'haskell-interactive-bring)
   (define-key haskell-mode-map (kbd "C-c <f17>") 'haskell-interactive-bring) ;; Used for keyremappings on Cocoa emacs
   (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
   (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
   (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
   (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
-  (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
   (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-jump-to-def-or-tag)
 
   (define-key haskell-mode-map (kbd "C-x C-s")
@@ -297,16 +327,17 @@ import" nil t)
 
       (save-buffer)))
   ))
-(eval-after-load 'haskell-cabal '(progn
-  (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
-  (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-ode-clear)
-  (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
-  (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
+;; (eval-after-load 'haskell-cabal '(progn
+;;   (message "JUST LOADED HASKELL CABAL")
+;;   (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
+;;   (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-ode-clear)
+;;   (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
+;;   (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
 ;; GHC
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
-(add-hook 'haskell-mode-hook #'hindent-mode)
+;; (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+;; (add-hook 'haskell-mode-hook #'hindent-mode)
 (eval-after-load 'haskell-mode
   `(define-key haskell-mode-map
      (kbd "C-c C-d")
@@ -435,6 +466,36 @@ import" nil t)
     (helm-do-ag (projectile-project-root))
     ))
 
+;; (defun projectile-helm-ag (arg &optional options)
+;;   (interactive "P")
+;;   (if arg
+;;       (progn
+;;         ;; Have to kill the prefix arg so it doesn't get forwarded
+;;         ;; and screw up helm-do-ag
+;;         (set-variable 'current-prefix-arg nil)
+;;         (let* ((grep-find-ignored-files (cl-union (projectile-ignored-files-rel) grep-find-ignored-files))
+;;                (grep-find-ignored-directories (cl-union (projectile-ignored-directories-rel) grep-find-ignored-directories))
+;;                (ignored (mapconcat (lambda (i)
+;;                                      (concat "--ignore " i))
+;;                                    (append grep-find-ignored-files grep-find-ignored-directories)
+;;                                    " "))
+;;                (helm-ag-command-option options)
+;;                (helm-ag-base-command (concat helm-ag-base-command " " ignored))
+;;                (current-prefix-arg nil))
+;;           (helm-do-ag (file-name-directory (buffer-file-name)) (car (projectile-parse-dirconfig-file))))
+;;         )
+;;     (let* ((grep-find-ignored-files (cl-union (projectile-ignored-files-rel) grep-find-ignored-files))
+;;            (grep-find-ignored-directories (cl-union (projectile-ignored-directories-rel) grep-find-ignored-directories))
+;;            (ignored (mapconcat (lambda (i)
+;;                                  (concat "--ignore " i))
+;;                                (append grep-find-ignored-files grep-find-ignored-directories)
+;;                                " "))
+;;            (helm-ag-command-option options)
+;;            (helm-ag-base-command (concat helm-ag-base-command " " ignored))
+;;            (current-prefix-arg nil))
+;;       (helm-do-ag (projectile-project-root) (car (projectile-parse-dirconfig-file))))
+;;     ))
+
 (defun projectile-helm-ag-in-folder ()
   (interactive)
   (helm-do-ag (projectile-project-root)))
@@ -460,5 +521,112 @@ import" nil t)
 
 ;; Coffeescript
 (custom-set-variables '(coffee-tab-width 2))
+
+
+;; ob-ipython stuff
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (python . t)
+   (emacs-lisp . t)
+   ))
+(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+;;; display/update images in the buffer after I evaluate
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+
+
+;; C/C++/Java settings
+(setq-default c-basic-offset 4)
+
+;; Typescript
+;; sample config
+(add-hook 'typescript-mode-hook
+          (lambda ()
+            (tide-setup)
+            (flycheck-mode t)
+            (setq flycheck-check-syntax-automatically '(save mode-enabled))
+            (eldoc-mode t)
+            (subword-mode)
+            ;; (setq tab-width 4)
+            ;; (setq typescript-indent-level 4)
+            ))
+
+
+;; multiple cursors improvements
+(defun mark-next-sexp ()
+  (interactive)
+  (when (not (use-region-p))
+    (push-mark)
+    (setq mark-active t)
+    (sp-forward-sexp)
+    )
+  (mc/mark-next-like-this 1)
+  )
+(global-set-key (kbd "C-c C->") 'mark-next-sexp)
+
+
+;; Turn on hideshowvis-minor-mode globally
+(define-globalized-minor-mode my-global-hideshowvis-mode hideshowvis-minor-mode
+  (lambda () (hideshowvis-minor-mode 1)))
+;; (my-global-hideshowvis-mode 1)
+
+
+;; Jedi.el
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
+;; tramp-hdfs
+(require 'tramp-hdfs)
+
+;; which-key
+(require 'which-key)
+(which-key-mode)
+
+;; wanderlust
+(autoload 'wl "wl" "Wanderlust" t)
+(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
+(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+
+;; IMAP
+(setq elmo-imap4-default-server "imap.gmail.com")
+(setq elmo-imap4-default-user "pyro777@gmail.com")
+(setq elmo-imap4-default-authenticate-type 'clear)
+(setq elmo-imap4-default-port '993)
+(setq elmo-imap4-default-stream-type 'ssl)
+
+(setq elmo-imap4-use-modified-utf7 t)
+
+;; SMTP
+(setq wl-smtp-connection-type 'starttls)
+(setq wl-smtp-posting-port 587)
+(setq wl-smtp-authenticate-type "plain")
+(setq wl-smtp-posting-user "pyro777")
+(setq wl-smtp-posting-server "smtp.gmail.com")
+(setq wl-local-domain "gmail.com")
+
+(setq wl-default-folder "%inbox")
+(setq wl-default-spec "%")
+(setq wl-draft-folder "%[Gmail]/Drafts") ; Gmail IMAP
+(setq wl-trash-folder "%[Gmail]/Trash")
+
+(setq wl-folder-check-async t)
+
+(setq elmo-imap4-use-modified-utf7 t)
+
+(autoload 'wl-user-agent-compose "wl-draft" nil t)
+(if (boundp 'mail-user-agent)
+    (setq mail-user-agent 'wl-user-agent))
+(if (fboundp 'define-mail-user-agent)
+    (define-mail-user-agent
+      'wl-user-agent
+      'wl-user-agent-compose
+      'wl-draft-send
+      'wl-draft-kill
+      'mail-send-hook))
+
+
+;; Nunjucks files
+(add-to-list 'auto-mode-alist '("\\.nunjucks\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.njk\\'" . web-mode))
 
 ;; (benchmark-init/deactivate)

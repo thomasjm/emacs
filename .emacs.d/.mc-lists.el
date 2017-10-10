@@ -4,24 +4,43 @@
 (setq mc/cmds-to-run-for-all
       '(
         backward-sexp
+        c-electric-delete-forward
+        coffee-indent-shift-left
+        compile-site
         dabbrev-expand
         delete-horizontal-space
+        dired-jump
         downcase-region
         elpy-nav-backward-indent
         elpy-nav-forward-indent
+        end-of-buffer
         forward-sexp
+        haskell-indentation-common-electric-command
         haskell-indentation-delete-backward-char
         haskell-mode-contextual-space
+        haskell-process-reload
         helm-M-x
         indent-for-tab-command
         kill-sexp-if-paren
+        markdown-exdent-or-delete
+        my-parens
+        new-scratch
+        org-beginning-of-line
         org-delete-char
+        org-end-of-line
+        org-meta-return
+        org-metaleft
+        org-metaright
         org-self-insert-command
         sp-backward-sexp
+        sp-backward-unwrap-sexp
         sp-copy-sexp
         sp-forward-sexp
         sp-forward-slurp-sexp
+        typescript-insert-and-indent
+        upcase-region
         whole-line-or-region-kill-region
+        whole-line-or-region-kill-ring-save
         whole-line-or-region-yank
         yas-expand
         zap-up-to-char
@@ -31,6 +50,17 @@
       '(
         beginning-of-buffer
         coffee-dedent-line-backspace
+        haskell-interactive-switch
+        haskell-mode-jump-to-def-or-tag
+        haskell-process-load-file
+        haskell-process-load-or-reload
         helm-confirm-and-exit-minibuffer
         helm-find-files
+        helm-mini
+        mac-mwheel-scroll
+        mark-next-sexp
+        mouse-buffer-menu
+        mouse-set-region
+        sp-forward-barf-sexp
+        yaml-electric-dash-and-dot
         ))
