@@ -21,7 +21,9 @@
  '(safe-local-variable-values
    (quote
     ((intero-targets "hite-server:lib" "hite-server:exe:hite-server" "hite-server:test:selenium-tests"))))
- '(typescript-indent-level 2))
+ '(typescript-indent-level 2)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-enable-auto-quoting nil))
 (setq company-bg-color (face-attribute 'default :background))
 ;; (require 'color)
 (custom-set-faces

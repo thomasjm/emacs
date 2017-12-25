@@ -64,12 +64,17 @@
 ;; delete-trailing-whitespace before every save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(message "Before emacs_packages")
+
 ;; Load packages
-(add-hook 'after-init-hook (lambda ()
+;; (add-hook 'after-init-hook (lambda ()
                              (load "emacs_packages.el")
 
                              ;; Apply theme
-                             (load-theme 'afternoon t)))
+                             (load-theme 'afternoon t)
+                             ;; ))
+
+(message "Before custom file")
 
 ;; Custom custom file
 (setq custom-file "~/.emacs.d/lisp/emacs_custom.el")
@@ -85,7 +90,12 @@
 ;; For some reason this key in keybindings.el is being overridden or something on Linux, so putting it here
 (global-set-key (kbd "M-h") 'backward-kill-word)
 
+(message "Before loading db.el")
+
+
 (load "db.el")
+
+(message "Before tide setq")
 
 (setq tide-tsserver-process-environment '("TSS_LOG=-level verbose -file /tmp/tss.log"))
 
@@ -93,5 +103,5 @@
 (setq w32-get-true-file-attributes nil)
 
 ;; Useful for debugging startup problems
-;; (toggle-debug-on-error 1)
+(toggle-debug-on-error 1)
 (put 'upcase-region 'disabled nil)

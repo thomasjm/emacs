@@ -6,6 +6,7 @@
         backward-sexp
         c-electric-delete-forward
         coffee-indent-shift-left
+        comment-dwim
         compile-site
         dabbrev-expand
         delete-horizontal-space
@@ -39,9 +40,11 @@
         sp-forward-slurp-sexp
         typescript-insert-and-indent
         upcase-region
+        web-mode-comment-or-uncomment
         whole-line-or-region-kill-region
         whole-line-or-region-kill-ring-save
         whole-line-or-region-yank
+        yaml-electric-backspace
         yas-expand
         zap-up-to-char
         ))
