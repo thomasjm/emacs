@@ -302,6 +302,9 @@
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 
+(with-eval-after-load 'intero
+  (flycheck-add-next-checker 'intero '(warning . haskell-hlint)))
+
 ;; (add-to-list 'load-path "~/.emacs.d/lisp/stack-mode")
 ;; (require 'stack-mode)
 ;; (add-hook 'haskell-mode-hook 'stack-mode)

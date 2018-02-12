@@ -24,6 +24,7 @@
         indent-for-tab-command
         kill-sexp-if-paren
         markdown-exdent-or-delete
+        my-mark-current-word
         my-parens
         new-scratch
         org-beginning-of-line
@@ -60,6 +61,7 @@
         helm-confirm-and-exit-minibuffer
         helm-find-files
         helm-mini
+        iflipb-next-buffer
         mac-mwheel-scroll
         mark-next-sexp
         mouse-buffer-menu

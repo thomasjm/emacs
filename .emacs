@@ -103,5 +103,5 @@
 (setq w32-get-true-file-attributes nil)
 
 ;; Useful for debugging startup problems
-(toggle-debug-on-error 1)
+;; (toggle-debug-on-error 1)
 (put 'upcase-region 'disabled nil)

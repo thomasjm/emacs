@@ -18,6 +18,7 @@
  '(haskell-process-log t)
  '(haskell-process-suggest-remove-import-lines t)
  '(haskell-tags-on-save t)
+ '(helm-split-window-inside-p t)
  '(safe-local-variable-values
    (quote
     ((intero-targets "hite-server:lib" "hite-server:exe:hite-server" "hite-server:test:selenium-tests"))))
