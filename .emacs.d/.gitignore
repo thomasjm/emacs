@@ -12,3 +12,5 @@ ido*.last
 .sx
 server
 .python-environments
+*.pyc
+semanticdb
