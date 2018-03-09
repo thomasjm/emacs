@@ -20,6 +20,9 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 
