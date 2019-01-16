@@ -5,6 +5,7 @@
       '(
         backward-sexp
         c-electric-delete-forward
+        c-electric-slash
         coffee-indent-shift-left
         comment-dwim
         compile-site
@@ -18,11 +19,14 @@
         forward-sexp
         haskell-indentation-common-electric-command
         haskell-indentation-delete-backward-char
+        haskell-indentation-newline-and-indent
         haskell-mode-contextual-space
         haskell-process-reload
         helm-M-x
         indent-for-tab-command
+        kill-region
         kill-sexp-if-paren
+        mark-sexp
         markdown-exdent-or-delete
         my-mark-current-word
         my-parens
@@ -39,6 +43,7 @@
         sp-copy-sexp
         sp-forward-sexp
         sp-forward-slurp-sexp
+        sp-kill-sexp
         typescript-insert-and-indent
         upcase-region
         web-mode-comment-or-uncomment
@@ -62,6 +67,7 @@
         helm-find-files
         helm-mini
         iflipb-next-buffer
+        intero-apply-suggestions
         mac-mwheel-scroll
         mark-next-sexp
         mouse-buffer-menu

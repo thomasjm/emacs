@@ -152,7 +152,6 @@
 (global-set-key (kbd "C-c M-t") 'run-current-test)
 
 ;; Mark current word
-(global-set-key (kbd "M-@") 'my-mark-current-word)
-(global-set-key "\M-s" 'my-mark-current-word)
+(global-set-key "\M-s" 'er/expand-region)
 
 (global-set-key (kbd "C-x z") 'zoom-window-zoom)

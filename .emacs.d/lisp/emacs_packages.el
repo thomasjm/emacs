@@ -119,6 +119,19 @@
 (global-set-key [(kbd "<f9>")] 'speedbar-lazy-load)
 
 
+(defun replace-all-dired ()
+  (interactive)
+
+  (find-name-dired default-directory "*")
+  (while (get-buffer-process (get-buffer "*Find*"))
+    (sit-for 1))
+
+  (dired-toggle-marks)
+
+  (dired-do-query-replace-regexp)
+  )
+
+
 ;; (defconst my-speedbar-buffer-name " SPEEDBAR")
 ;; (autoload 'sr-speedbar-toggle "sr-speedbar")
 ;; (require 'sr-speedbar)
@@ -133,22 +146,30 @@
 ;; (require 'impatient-mode)
 ;; (load "impatient-mode-stuff")
 
-;; auto-complete
-;; (require 'auto-complete-config)
-;; (ac-config-default)
 ;; company-mode
 (global-company-mode)
 ;; (add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends '(company-ghc :with company-dabbrev-code))
 (require 'color)
-;; (let ((bg (face-attribute 'default :background)))
-;;   (custom-set-faces
-;;    `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
-;;    `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-;;    `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 10)))))
-;;    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-;;    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
-;;    ))
+(let ((bg (face-attribute 'default :background)))
+  (custom-set-faces
+   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+   `(company-preview-common ((t (:background ,(color-lighten-name bg 5)))))
+   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+
+
+   ;; From emacs_custom.el
+   '(company-tooltip-annotation ((t (:foreground "deep sky blue"))))
+   '(company-tooltip-annotation-selection ((t (:inherit company-tooltip-annotation :foreground "deep sky blue" :weight bold))))
+   '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+
+   ))
+
+;; Stuff from emacs_custom.el
+(setq company-bg-color (face-attribute 'default :background))
 
 ;; Semantic stuff
 (add-to-list 'semantic-default-submodes
@@ -217,7 +238,7 @@
   (define-key ropemacs-local-keymap (kbd "M-/") nil)
 )
 (global-set-key "\C-xpl" 'load-ropemacs)
-
+;; (define-key org-mode-map "\M-q" 'toggle-truncate-lines)
 
 ;; eimp
 (autoload 'eimp-mode "eimp" "Emacs Image Manipulation Package." t)
@@ -597,8 +618,8 @@ import" nil t)
 
 
 ;; Jedi.el
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)
 
 ;; tramp-hdfs
 (require 'tramp-hdfs)
@@ -653,5 +674,13 @@ import" nil t)
 ;; Nunjucks files
 (add-to-list 'auto-mode-alist '("\\.nunjucks\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.njk\\'" . web-mode))
+
+;; coq mode
+(add-hook 'coq-mode-hook #'company-coq-mode)
+
+;; Seems this needs to be defined manually in Emacs 25
+(define-key global-map "\M-*" 'pop-tag-mark)
+
+(setq cquery-executable "/home/tom/path/cquery")
 
 ;; (benchmark-init/deactivate)

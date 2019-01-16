@@ -20,8 +20,13 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
+(set-variable 'package-archives
+              '(
+                ;; ("gnu" . "https://elpa.gnu.org/packages/")
+                ("melpa" . "https://melpa.org/packages/"))
+              )
+
+(menu-bar-mode -1)
 
 (setq mac-option-modifier 'control)
 (setq mac-command-modifier 'meta)
@@ -63,6 +68,7 @@
 
 ;; delete-trailing-whitespace before every save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (remove-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (message "Before emacs_packages")
 
@@ -101,6 +107,20 @@
 
 ; try to improve slow performance on windows.
 (setq w32-get-true-file-attributes nil)
+
+
+; Set up TLS security
+; https://glyph.twistedmatrix.com/2015/11/editor-malware.html#fnref:4
+(let ((trustfile
+       (replace-regexp-in-string
+        "\\\\" "/"
+        (replace-regexp-in-string
+         "\n" ""
+         (shell-command-to-string "python -m certifi")))))
+  (setq tls-program
+        (list
+         (format "gnutls-cli%s --x509cafile %s -p %%p %%h"
+                 (if (eq window-system 'w32) ".exe" "") trustfile))))
 
 ;; Useful for debugging startup problems
 ;; (toggle-debug-on-error 1)
