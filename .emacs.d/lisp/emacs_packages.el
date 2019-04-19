@@ -160,12 +160,9 @@
    `(company-preview-common ((t (:background ,(color-lighten-name bg 5)))))
    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
 
-
-   ;; From emacs_custom.el
    '(company-tooltip-annotation ((t (:foreground "deep sky blue"))))
    '(company-tooltip-annotation-selection ((t (:inherit company-tooltip-annotation :foreground "deep sky blue" :weight bold))))
    '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-
    ))
 
 ;; Stuff from emacs_custom.el

@@ -5,3 +5,5 @@
 auto-save-list
 ac-comphist.dat
 .emacs.desktop
+.emacs.d/elpa/archives
+.emacs.d/.mc-lists.el

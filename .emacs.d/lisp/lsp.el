@@ -6,3 +6,11 @@
                          '("R" "--slave" "-e" "languageserver::run()"))
 
 (add-hook 'R-mode-hook #'lsp-R-enable)
+
+
+
+(lsp-register-client
+    (make-lsp-client :new-connection
+        (lsp-stdio-connection '("bash-language-server" "start"))
+        :major-modes '(sh-mode)
+        :server-id 'lsp-bash))
