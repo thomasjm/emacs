@@ -14,3 +14,9 @@ server
 .python-environments
 *.pyc
 semanticdb
+.lsp-session*
+.#session*
+org-clock-save.el
+image-dired
+bookmarks
+request
