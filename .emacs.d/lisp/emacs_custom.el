@@ -55,4 +55,16 @@
  '(company-tooltip-annotation-selection ((t (:inherit company-tooltip-annotation :foreground "deep sky blue" :weight bold))))
  '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
  '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+
+ `(company-tooltip ((t (:inherit default :background ,(color-lighten-name (face-attribute 'default :background) 2)))))
+ `(company-scrollbar-bg ((t (:background ,(color-lighten-name (face-attribute 'default :background) 10)))))
+ `(company-scrollbar-fg ((t (:background ,(color-lighten-name (face-attribute 'default :background) 5)))))
+ `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+ `(company-preview-common ((t (:background ,(color-lighten-name (face-attribute 'default :background) 5)))))
+ `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+
+ '(company-tooltip-annotation ((t (:foreground "deep sky blue"))))
+ '(company-tooltip-annotation-selection ((t (:inherit company-tooltip-annotation :foreground "deep sky blue" :weight bold))))
+ '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+
  '(helm-selection ((t (:background "gray25" :distant-foreground "black" :foreground "white smoke")))))

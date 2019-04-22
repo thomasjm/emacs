@@ -151,19 +151,6 @@
 ;; (add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends '(company-ghc :with company-dabbrev-code))
 (require 'color)
-(let ((bg (face-attribute 'default :background)))
-  (custom-set-faces
-   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
-   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
-   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-   `(company-preview-common ((t (:background ,(color-lighten-name bg 5)))))
-   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
-
-   '(company-tooltip-annotation ((t (:foreground "deep sky blue"))))
-   '(company-tooltip-annotation-selection ((t (:inherit company-tooltip-annotation :foreground "deep sky blue" :weight bold))))
-   '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-   ))
 
 ;; Stuff from emacs_custom.el
 (setq company-bg-color (face-attribute 'default :background))
