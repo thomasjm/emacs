@@ -20,13 +20,13 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(set-variable 'package-archives
-              '(
-                ;; ("gnu" . "https://elpa.gnu.org/packages/")
-                ("melpa" . "https://melpa.org/packages/"))
-              )
-
 (menu-bar-mode -1)
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (setq mac-option-modifier 'control)
 (setq mac-command-modifier 'meta)
