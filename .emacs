@@ -48,6 +48,13 @@
 (add-to-list 'load-path "~/.emacs.d/lisp") ;; configs and elisp packages I've written
 (add-to-list 'load-path "~/.emacs.d/singletons") ;; Emacs packages that were downloaded separately and come as single files
 
+(setenv "PATH"
+  (concat
+   "/home/tom/.yarn/bin" ":"
+   (getenv "PATH")
+  )
+)
+
 ;; Misc functions
 (load "misc-functions.el")
 
