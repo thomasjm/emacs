@@ -9,7 +9,7 @@
 (global-set-key (kbd "<f18>") 'backward-kill-word) ;; Used with special Karabiner remapping for M-h on Cocoa emacs on OS X. Otherwise M-h hides the window.
 
 (global-set-key (kbd "M-d") 'subword-kill)
-
+(global-set-key (kbd "C-M-h") 'backward-kill-sexp)
 
 ;;; Other keybindings
 (global-set-key (kbd "C-M-r") 'revert-buffer)

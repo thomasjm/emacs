@@ -20,3 +20,4 @@ org-clock-save.el
 image-dired
 bookmarks
 request
+transient

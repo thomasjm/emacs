@@ -28,12 +28,41 @@
  '(helm-split-window-inside-p t)
  '(iflipb-ignore-buffers nil)
  '(js-indent-level 2)
+ '(lsp-clojure-server-command (quote ("/bin/bash" "-c" "/home/tom/path/clojure-lsp")))
  '(package-selected-packages
    (quote
-    (bats-mode lsp-ui lsp-rust lsp-sh lsp-typescript lsp-clangd cquery intero web-mode ess company-lsp lsp-mode nix-update nix-mode company-coq proof-general gited indium zoom-window zone-matrix zeal-at-point yasnippet-bundle yaml-mode whole-line-or-region which-key wgrep-helm wget web weather-metno watch-buffer wanderlust volume vlf vagrant unbound ubuntu-theme typescript tss tramp-hdfs tidy tide thrift symon sx sudo-ext sudo-edit sr-speedbar sql-indent solarized-theme smex smartparens skewer-less shm scss-mode scion scala-mode rust-mode reveal-in-finder restclient repl-toggle rainbow-mode rainbow-delimiters pytest pymacs py-isort py-import-check puppet-mode pungi psci protobuf-mode polymode php-mode perspective pcre2el pcache parscope paredit-menu org nsis-mode notify nose nginx-mode mo-git-blame minimap matlab-mode magit logito loccur less-css-mode kill-ring-search julia-mode jsx-mode jss js-comint jenkins-watch jedi-direx jabber ipython image-dired+ iflipb iedit idomenu htmlize hlint-refactor hindent highlight-symbol hideshowvis helm-swoop helm-spotify helm-projectile helm-package helm-itunes helm-hoogle helm-google helm-git-grep helm-git helm-ghc helm-flycheck helm-dash helm-css-scss helm-chrome helm-ag helm-ack hackernews graphviz-dot-mode gradle-mode google-maps google god-mode go-mode gitignore-mode git-timemachine git-gutter git-gutter+ ghci-completion ghc-imported-from geiser fuzzy fringe-helper format-sql flymake-jslint flymake-cursor flymake-coffee flycheck-pos-tip flycheck-ghcmod flycheck-clojure flx-ido fix-word expand-region evil esqlite emacs-eclim elpy elm-mode elixir-mode el-get ein-mumamo eimp ecb easy-hugo downplay-mode dockerfile-mode docker discover-my-major dirtree dired-subtree dired-sort-menu+ dired-dups dired-details+ dired+ dash-functional dash-at-point csharp-mode cpputils-cmake company-math company-jedi company-ghci company-ghc company-cider company-cabal company-c-headers color-theme-zenburn color-theme-twilight color-theme-solarized color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-theme-monokai color-theme-molokai color-theme-heroku color-theme-gruber-darker color-theme-github color-theme-eclipse color-theme-cobalt color-theme-actress coffee-mode cmake-project cmake-mode clj-refactor cinspect cider-spy cider-profile calfw-gcal calfw butler autodisass-java-bytecode angular-snippets all ag afternoon-theme ack-and-a-half ace-jump-mode ac-slime ac-python 2048-game)))
+    (haskell-mode ccls tide yaml-mode intero persp-projectile use-package kubernetes bats-mode lsp-rust lsp-sh lsp-typescript lsp-clangd cquery ess nix-update nix-mode company-coq proof-general gited indium zone-matrix yasnippet-bundle wget volume vagrant unbound ubuntu-theme typescript tss tramp-hdfs tidy thrift symon sx sudo-ext sudo-edit sr-speedbar sql-indent solarized-theme smex smartparens skewer-less shm scss-mode scion scala-mode rust-mode reveal-in-finder restclient repl-toggle rainbow-mode rainbow-delimiters pytest pymacs py-isort py-import-check puppet-mode pungi psci protobuf-mode polymode php-mode pcre2el pcache parscope paredit-menu org nsis-mode notify nose nginx-mode mo-git-blame minimap matlab-mode magit logito less-css-mode kill-ring-search julia-mode jsx-mode jss js-comint jenkins-watch jedi-direx jabber ipython image-dired+ iflipb iedit idomenu htmlize hlint-refactor hindent highlight-symbol hideshowvis helm-swoop helm-spotify helm-projectile helm-package helm-itunes helm-hoogle helm-google helm-git-grep helm-git helm-ghc helm-flycheck helm-dash helm-css-scss helm-chrome helm-ag helm-ack hackernews graphviz-dot-mode gradle-mode google-maps google god-mode go-mode gitignore-mode git-timemachine git-gutter git-gutter+ ghci-completion ghc-imported-from geiser fuzzy fringe-helper format-sql flymake-jslint flymake-cursor flymake-coffee flycheck-pos-tip flycheck-ghcmod flycheck-clojure flx-ido fix-word expand-region evil esqlite emacs-eclim elpy elm-mode elixir-mode el-get ein-mumamo eimp ecb easy-hugo downplay-mode dockerfile-mode docker discover-my-major dirtree dired-subtree dired-sort-menu+ dired-dups dired-details+ dired+ dash-functional dash-at-point csharp-mode cpputils-cmake company-jedi company-ghci company-ghc company-cider company-cabal company-c-headers color-theme-zenburn color-theme-twilight color-theme-solarized color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-theme-monokai color-theme-molokai color-theme-heroku color-theme-gruber-darker color-theme-github color-theme-eclipse color-theme-cobalt color-theme-actress cmake-project cmake-mode clj-refactor cinspect cider-spy cider-profile calfw-gcal calfw butler autodisass-java-bytecode angular-snippets all ag afternoon-theme ack-and-a-half ace-jump-mode ac-slime ac-python 2048-game)))
  '(safe-local-variable-values
    (quote
-    ((bug-reference-bug-regexp . "\\(\\(?:[Ii]ssue \\|[Ff]ixe[ds] \\|[Rr]esolve[ds]? \\|[Cc]lose[ds]? \\|[Pp]\\(?:ull [Rr]equest\\|[Rr]\\) \\|(\\)#\\([0-9]+\\))?\\)")
+    ((eval c-set-offset
+           (quote access-label)
+           (quote -))
+     (eval c-set-offset
+           (quote substatement-open)
+           0)
+     (eval c-set-offset
+           (quote arglist-cont-nonempty)
+           (quote +))
+     (eval c-set-offset
+           (quote arglist-cont)
+           0)
+     (eval c-set-offset
+           (quote arglist-intro)
+           (quote +))
+     (eval c-set-offset
+           (quote inline-open)
+           0)
+     (eval c-set-offset
+           (quote defun-open)
+           0)
+     (eval c-set-offset
+           (quote innamespace)
+           0)
+     (indicate-empty-lines . t)
+     (eval c-set-offset
+           (quote innamespace)
+           4)
+     (bug-reference-bug-regexp . "\\(\\(?:[Ii]ssue \\|[Ff]ixe[ds] \\|[Rr]esolve[ds]? \\|[Cc]lose[ds]? \\|[Pp]\\(?:ull [Rr]equest\\|[Rr]\\) \\|(\\)#\\([0-9]+\\))?\\)")
      (intero-targets "codedown-server:lib" "codedown-server:exe:codedown-server" "codedown-server:test:selenium-tests")
      (intero-targets "aeson-typescript:lib" "aeson-typescript:test:aeson-typescript-test")
      (intero-targets "hite:lib" "hite:exe:hite" "hite:test:hite-test" "hite-core:lib" "hite-test:lib")
@@ -47,24 +76,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-preview-common ((t (:background "#ffffff"))))
- '(company-scrollbar-bg ((t (:background "#ffffff"))))
- '(company-scrollbar-fg ((t (:background "#ffffff"))))
- '(company-tooltip ((t (:inherit default :background "#ffffff"))))
+ '(company-preview-common ((t (:background "#21e824bc35b0"))))
+ '(company-scrollbar-bg ((t (:background "#2bd12f784561"))))
+ '(company-scrollbar-fg ((t (:background "#21e824bc35b0"))))
+ '(company-tooltip ((t (:inherit default :background "#1bf61e4b2c46"))))
  '(company-tooltip-annotation ((t (:foreground "deep sky blue"))))
  '(company-tooltip-annotation-selection ((t (:inherit company-tooltip-annotation :foreground "deep sky blue" :weight bold))))
  '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
  '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-
- `(company-tooltip ((t (:inherit default :background ,(color-lighten-name (face-attribute 'default :background) 2)))))
- `(company-scrollbar-bg ((t (:background ,(color-lighten-name (face-attribute 'default :background) 10)))))
- `(company-scrollbar-fg ((t (:background ,(color-lighten-name (face-attribute 'default :background) 5)))))
- `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
- `(company-preview-common ((t (:background ,(color-lighten-name (face-attribute 'default :background) 5)))))
- `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
-
- '(company-tooltip-annotation ((t (:foreground "deep sky blue"))))
- '(company-tooltip-annotation-selection ((t (:inherit company-tooltip-annotation :foreground "deep sky blue" :weight bold))))
- '(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-
  '(helm-selection ((t (:background "gray25" :distant-foreground "black" :foreground "white smoke")))))

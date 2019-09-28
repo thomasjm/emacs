@@ -10,9 +10,16 @@
 (require 'projectile)
 (projectile-global-mode)
 
+;; Extra Projectile modes
+(projectile-register-project-type 'npm '("package.json")
+                                  :compile "npm install"
+                                  :test "npm test"
+                                  :run "npm start"
+                                  :test-suffix ".spec")
+
 ;; Perspective
-(require 'perspective)
-(persp-mode)
+;; (require 'perspective)
+;; (persp-mode)
 ;; (require 'persp-projectile)
 ;; (define-key projectile-mode-map (kbd "s-s") 'projectile-persp-switch-project) ;; TODO: move to keybindings file
 
@@ -383,26 +390,6 @@ import" nil t)
 ;; smartparens (way better than paredit)
 (load "my-smartparens-config")
 
-;; CIDER
-(setq cider-auto-select-error-buffer nil)
-(setq nrepl-error-buffer-select nil)
-(add-hook 'clojure-mode-hook (lambda ()
-                               ;; (load "my-smartparens-config")
-                               ;; (define-key cider-mode-map (kbd "<M-up>") 'sp-splice-sexp-killing-backward)
-                               (define-key cider-mode-map (kbd "C-c <f17>") 'cider-switch-to-repl-buffer) ;; Used for keyremappings on Cocoa emacs
-                               (define-key cider-mode-map "\C-c\C-k" 'cider-load-file)
-                               (define-key cider-mode-map "\C-c\C-l" 'cider-load-buffer)))
-
-
-;; clj-refactor
-(add-hook 'clojure-mode-hook (lambda ()
-                               (require 'clj-refactor)
-                               (clj-refactor-mode 1)
-                               (rainbow-delimiters-mode)
-                               ;; insert keybinding setup here
-                               (cljr-add-keybindings-with-prefix "C-c C-j")
-                               ))
-
 ;; downcase-region (TODO why did I do this)
 (put 'downcase-region 'disabled nil)
 
@@ -609,8 +596,8 @@ import" nil t)
 (require 'tramp-hdfs)
 
 ;; which-key
-(require 'which-key)
-(which-key-mode)
+;; (require 'which-key)
+;; (which-key-mode)
 
 ;; wanderlust
 (autoload 'wl "wl" "Wanderlust" t)
@@ -666,5 +653,9 @@ import" nil t)
 (define-key global-map "\M-*" 'pop-tag-mark)
 
 (setq cquery-executable "/home/tom/path/cquery")
+
+;; LSP stuff
+(require 'lsp-mode)
+(load "lsp.el")
 
 ;; (benchmark-init/deactivate)
