@@ -22,8 +22,8 @@
 
 (menu-bar-mode -1)
 
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
+;; (when (memq window-system '(mac ns x))
+;;   (exec-path-from-shell-initialize))
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
@@ -115,6 +115,7 @@
 ; try to improve slow performance on windows.
 (setq w32-get-true-file-attributes nil)
 
+(setq ring-bell-function 'ignore)
 
 ; Set up TLS security
 ; https://glyph.twistedmatrix.com/2015/11/editor-malware.html#fnref:4
