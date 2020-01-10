@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "cinspect" "20150716.233" "Use cinspect to look at the CPython source of builtins and other C objects!" '((emacs "24") (cl-lib "0.5") (deferred "0.3.1") (python-environment "0.0.2")) :commit "4e199a90f89b335cccda1518aa0963e0a1d4fbab" :keywords '("python") :authors '(("Ben Yelsey" . "ben.yelsey@gmail.com")) :maintainer '("Ben Yelsey" . "ben.yelsey@gmail.com") :url "https://github.com/inlinestyle/cinspect-mode")

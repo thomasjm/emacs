@@ -1,1 +1,0 @@
-(define-package "easy-hugo" "20180312.352" "Write blogs made with hugo by markdown or org-mode" '((emacs "24.4") (popup "0.5.3")) :commit "b14dc7f9d0da804daf8219fea48604b192a4389d" :url "https://github.com/masasam/emacs-easy-hugo")
