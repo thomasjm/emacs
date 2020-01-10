@@ -133,3 +133,6 @@
 ;; Useful for debugging startup problems
 ;; (toggle-debug-on-error 1)
 (put 'upcase-region 'disabled nil)
+
+;; Change default font size
+(set-face-attribute 'default nil :height 150)
