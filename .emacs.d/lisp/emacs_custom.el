@@ -31,7 +31,7 @@
  '(lsp-clojure-server-command (quote ("/bin/bash" "-c" "/home/tom/path/clojure-lsp")))
  '(package-selected-packages
    (quote
-    (yaml-mode indent-tools ccls persp-projectile bats-mode lsp-rust lsp-sh lsp-typescript lsp-clangd company-coq gited yasnippet-bundle wget unbound typescript tidy sql-indent reveal-in-finder pymacs parscope org notify ipython hideshowvis helm-package flymake-cursor eimp dirtree dired-sort-menu+ dired-details+ dired+ company-cabal company-c-headers cmake-project cmake-mode cinspect calfw-gcal calfw autodisass-java-bytecode all ag afternoon-theme ack-and-a-half ace-jump-mode ac-python)))
+    (indent-tools ccls persp-projectile bats-mode lsp-rust lsp-sh lsp-typescript lsp-clangd company-coq gited yasnippet-bundle wget unbound typescript tidy sql-indent reveal-in-finder pymacs parscope org notify ipython hideshowvis helm-package flymake-cursor eimp dirtree dired-sort-menu+ dired-details+ dired+ company-cabal company-c-headers cmake-project cmake-mode cinspect calfw-gcal calfw autodisass-java-bytecode all ag afternoon-theme ack-and-a-half ace-jump-mode ac-python)))
  '(safe-local-variable-values
    (quote
     ((eval c-set-offset
