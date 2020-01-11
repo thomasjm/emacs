@@ -31,7 +31,7 @@
  '(lsp-clojure-server-command (quote ("/bin/bash" "-c" "/home/tom/path/clojure-lsp")))
  '(package-selected-packages
    (quote
-    (indent-tools ccls persp-projectile bats-mode lsp-rust lsp-sh lsp-typescript lsp-clangd company-coq gited zone-matrix yasnippet-bundle wget unbound typescript tidy sql-indent reveal-in-finder pymacs parscope org notify minimap ipython hideshowvis helm-package flymake-cursor emacs-eclim eimp dirtree dired-sort-menu+ dired-details+ dired+ company-cider company-cabal company-c-headers color-theme-zenburn color-theme-twilight color-theme-solarized color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-theme-monokai color-theme-molokai color-theme-heroku color-theme-gruber-darker color-theme-github color-theme-eclipse color-theme-cobalt color-theme-actress cmake-project cmake-mode clj-refactor cinspect cider-spy cider-profile calfw-gcal calfw butler autodisass-java-bytecode angular-snippets all ag afternoon-theme ack-and-a-half ace-jump-mode ac-slime ac-python 2048-game)))
+    (yaml-mode indent-tools ccls persp-projectile bats-mode lsp-rust lsp-sh lsp-typescript lsp-clangd company-coq gited yasnippet-bundle wget unbound typescript tidy sql-indent reveal-in-finder pymacs parscope org notify ipython hideshowvis helm-package flymake-cursor eimp dirtree dired-sort-menu+ dired-details+ dired+ company-cabal company-c-headers cmake-project cmake-mode cinspect calfw-gcal calfw autodisass-java-bytecode all ag afternoon-theme ack-and-a-half ace-jump-mode ac-python)))
  '(safe-local-variable-values
    (quote
     ((eval c-set-offset
