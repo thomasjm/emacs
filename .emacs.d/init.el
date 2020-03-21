@@ -50,7 +50,9 @@
 
 (setenv "PATH"
   (concat
-   "/home/tom/.yarn/bin" ":"
+   "/home/tom/.yarn/bin" path-separator
+   "/home/tom/.ghcup/bin" path-separator
+   "/home/tom/.cabal/bin" path-separator
    (getenv "PATH")
   )
 )
